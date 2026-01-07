@@ -39,3 +39,29 @@ html {
     margin-top: 1.5rem;
     display: block;
 }
+
+/* --- ANIMACIÓN DE RESPIRACIÓN (GLOW) --- */
+@keyframes glow-pulse {
+    0% {
+        opacity: 0.05;
+        transform: scaleY(1);
+        filter: blur(100px);
+    }
+    50% {
+        opacity: 0.15;
+        transform: scaleY(1.15);
+        filter: blur(90px);
+    }
+    100% {
+        opacity: 0.05;
+        transform: scaleY(1);
+        filter: blur(100px);
+    }
+}
+
+.glow-breathing {
+    /* Velocidad reducida un 75% (de 6s a 10.5s) */
+    animation: glow-pulse 10.5s infinite ease-in-out;
+    will-change: opacity, transform, filter;
+    transform-origin: bottom;
+}
