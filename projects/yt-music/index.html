@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/png" href="./assets/logo/1-0534235e.ico">
+    <title>YouTube Music Redesign</title>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+</head>
+
+<body class="dark-theme dark">
+
+    <style>
+        .back-btn-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 100px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        /* Efecto al pasar el mouse */
+        .back-btn-link:hover .back-btn-container {
+            background: #ff0000 !important;
+            /* Rojo YouTube */
+            border-color: #ff0000 !important;
+            transform: scale(1.05);
+        }
+
+        .back-btn-link:hover .back-icon {
+            stroke: white !important;
+        }
+
+        .back-btn-link:hover .back-text {
+            color: white !important;
+        }
+    </style>
+
+    <div style="position: fixed; top: 24px; left: 24px; z-index: 9999;">
+        <a href="../../index.html" class="back-btn-link" style="text-decoration: none;">
+            <div class="back-btn-container">
+                <svg class="back-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="transition: all 0.3s ease;">
+                    <path d="M19 12H5m7-7l-7 7 7 7" />
+                </svg>
+                <span class="translate back-text" data-en="BACK" data-es="VOLVER" style="font-family: 'Archivo', sans-serif; font-size: 10px; font-weight: 700; color: white; letter-spacing: 0.1em; transition: all 0.3s ease;">
+                    VOLVER
+                </span>
+            </div>
+        </a>
+    </div>
+
+    <div class="fixed top-4 right-4 md:top-6 md:right-6 z-50 flex gap-3">
+        <button id="lang-toggle" class="w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden border border-zinc-700 bg-zinc-800/80 backdrop-blur-sm flex items-center justify-center p-0">
+            <span id="lang-flag-container" class="w-full h-full"></span>
+        </button>
+        <button id="theme-toggle" class="w-10 h-10 md:w-12 md:h-12 rounded-full border border-zinc-700 bg-zinc-800/80 backdrop-blur-sm flex items-center justify-center text-white">
+            <span id="theme-icon-container" class="w-5 h-5 flex items-center justify-center"></span>
+        </button>
+    </div>
+
+    <main id="main-content">
+        <section id="section-0" class="section-page px-6">
+            <div class="w-full max-w-4xl mx-auto flex flex-col items-center text-center space-y-8">
+                <p class="text-[10px] md:text-xl font-medium opacity-60 tracking-[0.2em] uppercase">UX Case Study</p>
+                <h1 class="text-4xl md:text-8xl font-bold leading-tight tracking-tighter">
+                    <span style="color: var(--yt-red) !important;">YouTube Music:</span><br>
+                    <span class="translate" data-es="Rediseñando el flujo del usuario." data-en="Redesigning the user flow.">Redesigning the user flow.</span>
+                </h1>
+                <p class="text-[16px] md:text-xl opacity-80 max-w-lg translate" data-es="Simplificando el descubrimiento musical y la interfaz de reproducción." data-en="Simplifying music discovery and the playback interface.">Simplifying music discovery and the playback interface.</p>
+                <p class="text-[12px] md:text-base opacity-80 max-w-lg translate py-4 text-red-600 dark:text-teal-300 rounded-lg" data-es="Concept redesign basado en problemas reales observados en YouTube Music. Métricas planteadas como estimaciones de impacto." data-en="Concept redesign based on real issues observed in YouTube Music. Metrics are presented as estimated impact.">Concept redesign based on real issues observed in YouTube Music. Metrics are presented as estimated impact.</p>
+
+                <div class="flex flex-col md:flex-row gap-4 mt-8">
+                    <a href="https://figma.fun/6APaFL" target="_blank" class="btn-outline-figma">
+                        <svg width="16" height="24" viewBox="0 0 38 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 28.5C19 23.235 23.235 19 28.5 19C33.765 19 38 23.235 38 28.5C38 33.765 33.765 38 28.5 38C23.235 38 19 33.765 19 28.5Z" fill="#1ABCFE" />
+                            <path d="M0 47.5C0 42.235 4.235 38 9.5 38H19V47.5C19 52.765 14.765 57 9.5 57C4.235 57 0 52.765 0 47.5Z" fill="#0ACF83" />
+                            <path d="M19 0H28.5C33.765 0 38 4.235 38 9.5C38 14.765 33.765 19 28.5 19H19V0Z" fill="#FF7262" />
+                            <path d="M0 9.5C0 4.235 4.235 0 9.5 0H19V19H9.5C4.235 19 0 14.765 0 9.5Z" fill="#F24E1E" />
+                            <path d="M0 28.5C0 23.235 4.235 19 9.5 19H19V38H9.5C4.235 38 0 33.765 0 28.5Z" fill="#A259FF" />
+                        </svg>
+                        <span class="translate" data-es="FIGMA FILE" data-en="FIGMA FILE">FIGMA FILE</span>
+                    </a>
+                    <button onclick="goToSection(1)" class="btn-primary translate" data-es="Explorar Proceso" data-en="Explore Process">Explore Process</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="section-1" class="section-page px-6">
+            <div class="w-full max-w-xl md:max-w-6xl mx-auto flex flex-col items-center text-center">
+                <div class="w-full aspect-video rounded-xl mb-4 md:mb-8 bg-zinc-900 border border-zinc-800 flex items-center justify-center overflow-hidden">
+                    <img src="assets/impacto.png" alt="Impact Metrics" class="w-full h-full object-cover">
+                </div>
+                <h2 class="text-[10px] font-bold opacity-50 uppercase tracking-[0.3em] mb-2 md:mb-4 translate" data-es="01. Mi Enfoque e Impacto" data-en="01. My Approach & Impact">01. My Approach & Impact</h2>
+                <h3 class="text-[20px] md:text-4xl font-bold mb-2 md:mb-4 translate" data-es="Cómo optimicé la experiencia." data-en="How I optimized the experience.">How I optimized the experience.</h3>
+                <p class="text-[16px] md:text-lg opacity-70 max-w-2xl mb-6 md:mb-8 translate" data-es="Me propuse reducir la sobrecarga cognitiva simplificando tareas críticas. Al rediseñar los flujos principales, logré elevar la eficiencia percibida y la usabilidad del sistema, obteniendo los siguientes resultados:" data-en="My goal was to minimize cognitive overload through the simplification of critical tasks. Redesigning key user flows allowed me to boost both perceived efficiency and system usability, leading to these outcomes:">My goal was to minimize cognitive overload through the simplification of critical tasks. Redesigning key user flows allowed me to boost both perceived efficiency and system usability, leading to these outcomes:</p>
+                <div class="grid grid-cols-2 gap-4 w-full max-w-lg">
+                    <div class="stats-card-centered p-4 md:p-8 rounded-xl">
+                        <p class="metric-number text-4xl md:text-6xl">+80%</p>
+                        <p class="instruction-text translate" data-es="Eficiencia" data-en="Efficiency">Efficiency</p>
+                    </div>
+                    <div class="stats-card-centered p-4 md:p-8 rounded-xl">
+                        <p class="metric-number text-4xl md:text-6xl">85/100</p>
+                        <p class="instruction-text translate" data-es="SUS - Usabilidad" data-en="SUS - Usability">SUS - Usability</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section-2" class="section-page px-6">
+            <div class="w-full max-w-6xl mx-auto flex flex-col items-center text-center py-4 md:py-20 h-full justify-center">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 w-full mb-6 md:mb-12">
+                    <div class="aspect-square rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center overflow-hidden">
+                        <img src="./assets/line-graph.png" class="w-full h-full object-cover">
+                    </div>
+                    <div class="hidden md:flex aspect-square rounded-xl bg-zinc-900 border border-zinc-800 items-center justify-center overflow-hidden">
+                        <img src="./assets/mapa-carlos.png" class="w-full h-full object-cover">
+                    </div>
+                    <div class="hidden md:flex aspect-square rounded-xl bg-zinc-900 border border-zinc-800 items-center justify-center overflow-hidden">
+                        <img src="./assets/mapa-elena.png" class="w-full h-full object-cover">
+                    </div>
+                    <div class="hidden md:flex aspect-square rounded-xl bg-zinc-900 border border-zinc-800 items-center justify-center overflow-hidden">
+                        <img src="./assets/mapa-elena.png" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <h2 class="text-[10px] font-bold opacity-50 uppercase tracking-[0.3em] mb-1 md:mb-2 translate" data-es="02. El Problema" data-en="02. The Problem">02. The Problem</h2>
+                <h3 class="text-[20px] md:text-4xl font-bold mb-2 md:mb-3 translate" data-es="Ruido vs. Ritmo." data-en="Noise vs. Rhythm.">Noise vs. Rhythm.</h3>
+
+                <div class="grid grid-cols-2 gap-2 md:gap-6 w-full max-w-6xl">
+                    <div class="stats-card p-4 md:p-10 rounded-2xl md:rounded-[40px] w-full text-center items-center">
+                        <p class="persona-name text-lg md:text-2xl font-bold">Elena, 22</p>
+                        <p class="instruction-text mb-2 md:mb-4 translate" data-es="DJ Urbana" data-en="Urban DJ">Urban DJ</p>
+                        <p class="text-[12px] md:text-sm leading-[1.5] opacity-80 translate" data-es="Perdida en demasiados pasos al organizar su música. <span class='hidden md:inline'>Elena vive cada mood con una playlist distinta, pero guardar canciones era un proceso lento. Ahora, puede añadir contenido a múltiples listas simultáneamente, optimizando su rutina musical.</span> <br><span class='block underline font-semibold mt-2'>Después del rediseño:</span> Listas preparadas en segundos." data-en="Buried in too many steps while organizing her music. <span class='hidden md:inline'>Elena matches every mood with a different playlist, but saving songs used to be a slow process. Now, she can add content to multiple playlists simultaneously, optimizing her musical routine.</span> <br><span class='block underline font-semibold mt-2'>After redesign:</span> Playlists ready in seconds.">
+                            Buried in too many steps while organizing her day. <br><span class='block underline font-semibold mt-2'>After redesign:</span> Playlists ready in seconds.
+                        </p>
+                    </div>
+
+                    <div class="stats-card p-4 md:p-10 rounded-2xl md:rounded-[40px] w-full text-center items-center">
+                        <p class="persona-name text-lg md:text-2xl font-bold">Carlos, 70</p>
+                        <p class="instruction-text mb-2 md:mb-4 translate" data-es="Melómano" data-en="Music Lover">Music Lover</p>
+                        <p class="text-[12px] md:text-sm leading-[1.5] opacity-80 translate" data-es="Frustrado por el ruido visual que le causaba estrés. <span class='hidden md:inline'>Carlos solía abandonar la app por la saturación de secciones. Con el rediseño, ahora puede limpiar su pantalla Home y organizar sus favoritos con facilidad, recuperando el placer de escuchar música sin distracciones.</span> <br><span class='block underline font-semibold mt-2'>Después del rediseño:</span> Ahora escucha sus clásicos sin fatiga." data-en="Frustrated by visual noise that caused him stress. <span class='hidden md:inline'>Carlos used to quit the app due to section overload. With the redesign, he can now clean up his Home screen and organize his favorites with ease, regaining the joy of listening to music without distractions.</span> <br><span class='block underline font-semibold mt-2'>After redesign:</span> Now he listens his classics without fatigue.">
+                            Frustrated by visual noise that caused him stress. <br><span class='block underline font-semibold mt-2'>After redesign:</span> Classics found without errors or fatigue.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section-3" class="section-page px-6">
+            <div class="w-full max-w-xl md:max-w-6xl mx-auto flex flex-col items-center text-center">
+                <div class="w-full aspect-video rounded-xl mb-4 md:mb-8 bg-zinc-900 border border-zinc-800 flex items-center justify-center overflow-hidden">
+                    <img src="./assets/mockups.png" class="w-full h-full object-cover">
+                </div>
+                <h2 class="text-[10px] font-bold opacity-50 uppercase tracking-[0.3em] mb-2 md:mb-4 translate" data-es="03. La Solución" data-en="03. The Solution">03. La Solución</h2>
+                <h3 class="text-[20px] md:text-4xl font-bold mb-2 md:mb-4 translate" data-es="Control Arquitectónico." data-en="Architectural Control.">Architectural Control.</h3>
+                <p class="text-[16px] md:text-lg opacity-70 max-w-4xl mb-6 md:mb-8 translate" data-es="Para combatir la parálisis de decisión, me enfocqué en el control en lugar de añadir funciones. Al introducir un sistema de tarjetas modulares, los usuarios pueden personalizar su pantalla de inicio." data-en="To combat Decision Paralysis, I focused on architectural control rather than adding new features. By introducing a modular and editable card system, users can now customize their home screen.">To combat Decision Paralysis, I focused on architectural control rather than adding new features. By introducing a modular and editable card system, users can now customize their home screen.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-3xl mb-4">
+                    <div class="stats-card p-6 rounded-2xl text-left items-start" style="border: 1px solid #3cffd0 !important;">
+                        <p class="text-[14px] leading-relaxed translate" data-es="Las 14 secciones originales se reducen y reorganizan en una estructura clara y jerárquica." data-en="The 14 original sections are now reduced and reorganized into a clearer, more hierarchical structure.">The 14 original sections are now reduced and reorganized into a clearer, more hierarchical structure.</p>
+                    </div>
+                    <div class="stats-card p-6 rounded-2xl text-left items-start" style="border: 1px solid #3cffd0 !important;">
+                        <p class="text-[14px] leading-relaxed translate" data-es="Función 'Edita tu Espacio': El usuario puede eliminar, reordenar o renombrar secciones libremente." data-en="'Edit Your Space' feature: Users can now remove, reorder, or rename sections directly from the Home Screen.">'Edit Your Space' feature: Users can now remove, reorder, or rename sections directly from the Home Screen.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section-4" class="section-page px-6 flex items-center justify-center">
+            <div class="w-full max-w-6xl mx-auto flex flex-col items-center text-center md:text-left">
+                <div class="w-full aspect-video rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center overflow-hidden mb-8 md:mb-12">
+                    <img src="./assets/close.png" class="w-full h-full object-cover" alt="Efficiency Boost Results">
+                </div>
+                <div class="w-full grid grid-cols-1 md:grid-cols-12 gap-8 items-center md:items-start">
+                    <div class="md:col-span-4 space-y-4">
+                        <h2 class="text-[10px] font-bold opacity-50 uppercase tracking-[0.3em] flex items-center justify-center md:justify-start gap-2">
+                            🚀 <span>The 80% Efficiency Boost</span>
+                        </h2>
+                        <h3 class="text-2xl md:text-5xl font-bold translate" data-es="Flujos optimizados para todos." data-en="Optimized flows for everyone.">Optimized flows for everyone.</h3>
+                        <p class="text-sm md:text-lg opacity-70 translate" data-es="Al re-diseñar el flujo de guardado y búsqueda, resolvemos las frustraciones de ambos perfiles bajo un mismo modelo eficiente." data-en="By re-engineering the save and search flow, we resolve the frustrations of both profiles under a single efficient model.">By re-engineering the save and search flow, we resolve the frustrations of both profiles under a single efficient model.</p>
+                    </div>
+                    <div class="md:col-span-8 grid grid-cols-1 gap-8">
+                        <div class="flex flex-col md:flex-row gap-4 items-center md:items-stretch">
+                            <div class="w-full md:w-1 bg-red-600 h-1 md:h-auto"></div>
+                            <div class="text-center md:text-left">
+                                <p class="profile-label font-bold text-xs uppercase mb-1">FOR ELENA (THE DJ)</p>
+                                <p class="text-[10px] md:text-sm opacity-60 leading-relaxed translate" data-es="Como DJ activa, Elena exige una velocidad extrema. Al implementar un sistema inteligente de selección múltiple y un acceso directo a la función 'Guardar', transformé un proceso frustrante de 6 pasos en una acción fluida de un solo toque." data-en="As an active DJ, Elena demands extreme speed. By implementing a smart multi-select system and a 'Save' function shortcut, I transformed a frustrating 6-step process into a fluid, one-tap action.">
+                                    As an active DJ, Elena demands extreme speed. By implementing a smart multi-select system and a 'Save' function shortcut, I transformed a frustrating 6-step process into a fluid, one-tap action.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col md:flex-row gap-4 items-center md:items-stretch">
+                            <div class="w-full md:w-1 bg-zinc-600 h-1 md:h-auto"></div>
+                            <div class="text-center md:text-left">
+                                <p class="profile-label font-bold text-xs uppercase mb-1">FOR CARLOS (THE MUSIC LOVER)</p>
+                                <p class="text-[10px] md:text-sm opacity-60 leading-relaxed translate" data-es="Carlos valora la claridad sobre la recomendación constante. Mi rediseño le otorgó control total para eliminar o editar secciones del Inicio, eliminando el desorden visual, la fricción de navegación y la fatiga cognitiva." data-en="Carlos values clarity over constant suggestions. My redesign gave him full control to remove or edit Home sections, eliminating visual clutter, navigation friction, and cognitive fatigue.">
+                                    Carlos values clarity over constant suggestions. My redesign gave him full control to remove or edit Home sections, eliminating visual clutter, navigation friction, and cognitive fatigue.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section-5" class="section-page px-6">
+            <div class="w-full max-w-4xl mx-auto flex flex-col items-center text-center">
+                <h2 class="text-4xl md:text-7xl font-bold mb-8 translate" data-es="Gracias por tu visita." data-en="Thanks for your time.">Thanks for your time.</h2>
+                <div class="mb-12">
+                    <a href="https://figma.fun/6APaFL" target="_blank" class="btn-outline-figma">
+                        <svg width="16" height="24" viewBox="0 0 38 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 28.5C19 23.235 23.235 19 28.5 19C33.765 19 38 23.235 38 28.5C38 33.765 33.765 38 28.5 38C23.235 38 19 33.765 19 28.5Z" fill="#1ABCFE" />
+                            <path d="M0 47.5C0 42.235 4.235 38 9.5 38H19V47.5C19 52.765 14.765 57 9.5 57C4.235 57 0 52.765 0 47.5Z" fill="#0ACF83" />
+                            <path d="M19 0H28.5C33.765 0 38 4.235 38 9.5C38 14.765 33.765 19 28.5 19H19V0Z" fill="#FF7262" />
+                            <path d="M0 9.5C0 4.235 4.235 0 9.5 0H19V19H9.5C4.235 19 0 14.765 0 9.5Z" fill="#F24E1E" />
+                            <path d="M0 28.5C0 23.235 4.235 19 9.5 19H19V38H9.5C4.235 38 0 33.765 0 28.5Z" fill="#A259FF" />
+                        </svg>
+                        <span class="translate" data-es="FIGMA FILE" data-en="FIGMA FILE">FIGMA FILE</span>
+                    </a>
+                </div>
+                <div class="flex gap-6">
+                    <a href="https://tinyurl.com/3h7nrskb" target="_blank" class="w-14 h-14 rounded-full border border-zinc-800 flex items-center justify-center font-bold hover:bg-white hover:text-black transition-colors cursor-pointer">
+                        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+                    <a href="https://tinyurl.com/2yxt55y9" target="_blank" class="w-14 h-14 rounded-full border border-zinc-800 flex items-center justify-center font-bold hover:bg-white hover:text-black transition-colors cursor-pointer text-sm">CV</a>
+                </div>
+            </div>
+        </section>
+
+        <div id="navigation-hint" class="fixed bottom-8 left-8 right-8 z-40 flex items-center pointer-events-none transition-opacity duration-300">
+            <div class="flex items-center gap-3">
+                <div class="md:hidden flex flex-col items-center">
+                    <svg class="w-4 h-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11l5-5m0 0l5 5m-5-5v12"></path>
+                    </svg>
+                    <svg class="w-4 h-4 opacity-50 -mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 13l-5 5m0 0l-5-5m5 5V6"></path>
+                    </svg>
+                </div>
+                <div class="hidden md:flex flex-col gap-1">
+                    <div class="key-cap">▲</div>
+                    <div class="key-cap">▼</div>
+                </div>
+                <span class="instruction-text text-[10px] uppercase opacity-50">
+                    <span class="md:hidden translate" data-es="DESLIZA" data-en="SLIDE">SLIDE</span>
+                    <span class="hidden md:inline translate" data-es="Utiliza flechas o scroll" data-en="Use arrows or scroll">Use arrows or scroll</span>
+                </span>
+            </div>
+        </div>
+
+        <button id="back-to-top" onclick="goToSection(0)" class="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 opacity-0 pointer-events-none transition-all duration-300 btn-primary flex items-center gap-2 translate" data-es="VOLVER AL INICIO" data-en="BACK TO START">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+            </svg>
+            <span class="translate" data-es="VOLVER AL INICIO" data-en="BACK TO START">BACK TO START</span>
+        </button>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
