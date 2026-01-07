@@ -1,130 +1,41 @@
-/* --- ESTILOS BASE --- */
-.font-karla {
-    font-family: "Karla", sans-serif;
-}
-.font-800 {
-    font-weight: 800;
-}
-.font-700 {
-    font-weight: 700;
-}
-.font-600 {
-    font-weight: 600;
-}
-.font-500 {
-    font-weight: 500;
-}
-.font-400 {
-    font-weight: 400;
-}
-
 html {
-    scroll-behavior: smooth;
-    overscroll-behavior: none;
-}
-body {
-    background-color: #181818;
-    overflow-x: hidden;
-}
-.section-padding {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    scroll-behavior: auto;
 }
 
-@media (min-width: 1024px) {
-    .section-padding {
-        padding-left: 4rem;
-        padding-right: 4rem;
-    }
-}
-
-/* --- NAVS Y BOTONES --- */
-.lang-btn-pill {
-    height: 40px;
-    min-width: 85px;
-    border: 1px solid #2a2a2a;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 800;
-    color: #ffffff;
-    background-color: #181818;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-}
-.lang-btn-pill:hover {
-    border-color: #4ef3a1;
-    color: #4ef3a1;
-}
-
-.nav-link {
-    font-size: 11px;
-    font-weight: 600;
+/* Nav Desktop & Mobile Links */
+.nav-link,
+.mobile-nav-item {
     color: #c4c4c4;
     transition: all 0.3s ease;
-    text-decoration: none;
 }
+
+/* Indicador de sección activa */
+.nav-link.active,
+.mobile-nav-item.active {
+    color: #4ef3a1 !important;
+}
+
+/* Hover */
 .nav-link:hover {
     color: #4ef3a1;
 }
 
-.mobile-nav-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-    color: #c4c4c4;
-    text-decoration: none;
+/* Botón Idioma */
+.lang-toggle {
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* --- SOFTWARE STACK --- */
-.software-row {
-    border-bottom: 1px solid #2a2a2a;
-    padding: 16px 0;
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
+.lang-toggle:hover {
+    transform: scale(1.05);
+    color: #4ef3a1;
+    border-color: #4ef3a1;
 }
 
-/* --- TRABAJO --- */
-.lang-btn-pill:active,
-.mobile-nav-item:active,
-.project-card:active {
-    transform: scale(0.95);
-}
-
-/* --- EFECTO LUZ CÓSMICA --- */
-.cosmic-light-glow {
-    position: absolute;
-    bottom: -20px; /* Bajamos un poco más para que el centro del brillo esté en el borde */
-    left: 10%;
-    width: 80%; /* Lo hacemos un poco más estrecho para que no sea una línea plana */
-    height: 100px; /* Más altura para que el degradado tenga espacio */
-    pointer-events: none;
-    z-index: 0;
-    filter: blur(60px); /* Aumentamos el desenfoque para suavizarlo */
-    will-change: transform, opacity;
-    background: radial-gradient(
-        ellipse at bottom,
-        rgba(78, 243, 161, 0.6) 0%,
-        /* Subimos al 60% de intensidad */ rgba(78, 243, 161, 0.1) 60%,
-        transparent 100%
-    );
-}
-
-.cosmic-active {
-    animation: humanBreathe 8s infinite ease-in-out; /* Respiración un poco más rápida para que sea notable */
-}
-
-@keyframes humanBreathe {
-    0%,
-    100% {
-        opacity: 0.4;
-        transform: scaleX(1);
-    }
-    50% {
-        opacity: 0.9;
-        transform: scaleX(1.1);
-    }
+/* Project Card Estructura */
+.project-info-container {
+    max-height: none;
+    opacity: 1;
+    margin-top: 1.5rem;
+    display: block;
 }

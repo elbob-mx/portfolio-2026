@@ -17,9 +17,7 @@
                         'warm-grey': '#2a2a2a',
                         'nav-gray': '#c4c4c4'
                     },
-                    fontFamily: {
-                        'karla': ['"Karla"', 'sans-serif']
-                    }
+                    fontFamily: { 'karla': ['"Karla"', 'sans-serif'] }
                 }
             }
         }
@@ -27,163 +25,145 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-bg-main text-white font-karla selection:bg-accent selection:text-bg-main">
+<body class="bg-bg-main text-white font-karla selection:bg-accent selection:text-bg-main overflow-x-hidden">
 
-    <div class="lg:hidden fixed top-8 right-8 z-[60]">
-        <button class="lang-btn-pill lang-toggle flex items-center gap-2 px-4">
+    <div class="fixed top-8 right-0 w-full lg:w-[120px] flex justify-end pr-8 lg:pr-0 lg:justify-center z-[60] pointer-events-none">
+        <button class="lang-toggle pointer-events-auto flex items-center justify-center gap-2 px-4 py-2 border border-white/10 rounded-full bg-bg-main/50 backdrop-blur-md transition-all duration-300">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="10" />
                 <line x1="2" y1="12" x2="22" y2="12" />
                 <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
             </svg>
-            <span class="lang-label">ESP</span>
+            <span class="lang-label font-bold text-[12px]">ESP</span>
         </button>
     </div>
 
-    <nav class="hidden lg:flex fixed right-0 top-0 h-full w-[120px] border-l border-warm-grey z-50 bg-bg-main flex-col items-center pt-[2rem] pb-32">
-        <div class="mb-[160px]">
-            <button class="lang-btn-pill lang-toggle flex items-center justify-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10" />
-                    <line x1="2" y1="12" x2="22" y2="12" />
-                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-                </svg>
-                <span class="lang-label">ESP</span>
-            </button>
-        </div>
+    <nav class="hidden lg:flex fixed right-0 top-0 h-full w-[120px] border-l border-warm-grey z-50 bg-bg-main flex-col items-center justify-center">
         <div class="flex flex-col gap-12 items-center">
-            <a href="#hero" class="nav-link tracking-widest uppercase" id="nav-start">START</a>
-            <a href="#about" class="nav-link tracking-widest uppercase" id="nav-story">STORY</a>
-            <a href="#skills" class="nav-link tracking-widest uppercase" id="nav-stack">STACK</a>
-            <a href="#work" class="nav-link tracking-widest uppercase" id="nav-work">WORK</a>
-            <a href="#contact" class="nav-link tracking-widest uppercase" id="nav-contact">CONTACT</a>
+            <a href="#hero" class="nav-link tracking-widest uppercase text-[12px]">START</a>
+            <a href="#about" class="nav-link tracking-widest uppercase text-[12px]">STORY</a>
+            <a href="#skills" class="nav-link tracking-widest uppercase text-[12px]">STACK</a>
+            <a href="#work" class="nav-link tracking-widest uppercase text-[12px]">WORK</a>
+            <a href="#contact" class="nav-link tracking-widest uppercase text-[12px]">CONTACT</a>
         </div>
     </nav>
 
-    <nav class="lg:hidden fixed bottom-0 left-0 w-full h-[72px] bg-bg-main border-t border-warm-grey z-50 flex justify-around items-center px-8">
-        <a href="#hero" class="mobile-nav-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <nav id="mobile-bottom-nav" class="lg:hidden fixed bottom-0 left-0 w-full h-[72px] bg-bg-main border-t border-warm-grey z-50 flex justify-around items-center">
+        <a href="#hero" class="mobile-nav-item flex-1 flex flex-col items-center justify-center gap-1 h-full">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
                 <polyline points="9 22 9 12 15 12 15 22" />
-            </svg><span class="text-[10px] font-bold" id="m-nav-start">START</span></a>
-        <a href="#about" class="mobile-nav-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            </svg>
+            <span class="text-[10px] font-bold uppercase">START</span>
+        </a>
+        <a href="#about" class="mobile-nav-item flex-1 flex flex-col items-center justify-center gap-1 h-full">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
                 <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
-            </svg><span class="text-[10px] font-bold" id="m-nav-story">STORY</span></a>
-        <a href="#skills" class="mobile-nav-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91-6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
-            </svg><span class="text-[10px] font-bold" id="m-nav-stack">STACK</span></a>
-        <a href="#work" class="mobile-nav-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            </svg>
+            <span class="text-[10px] font-bold uppercase">STORY</span>
+        </a>
+        <a href="#skills" class="mobile-nav-item flex-1 flex flex-col items-center justify-center gap-1 h-full">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                <polyline points="2 17 12 22 22 17" />
+                <polyline points="2 12 12 17 22 12" />
+            </svg>
+            <span class="text-[10px] font-bold uppercase">STACK</span>
+        </a>
+        <a href="#work" class="mobile-nav-item flex-1 flex flex-col items-center justify-center gap-1 h-full">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect width="20" height="14" x="2" y="7" rx="2" ry="2" />
                 <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
-            </svg><span class="text-[10px] font-bold" id="m-nav-work">WORK</span></a>
-        <a href="#contact" class="mobile-nav-item"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            </svg>
+            <span class="text-[10px] font-bold uppercase">WORK</span>
+        </a>
+        <a href="#contact" class="mobile-nav-item flex-1 flex flex-col items-center justify-center gap-1 h-full">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-            </svg><span class="text-[10px] font-bold" id="m-nav-contact">CONTACT</span></a>
+            </svg>
+            <span class="text-[10px] font-bold uppercase">CONTACT</span>
+        </a>
     </nav>
 
-    <main class="w-full pb-[80px] lg:pb-0 lg:pr-[120px]">
-
-        <section id="hero" class="section-padding min-h-[100svh] flex flex-col justify-center">
-            <h1 class="text-[32px] md:text-[72px] leading-tight mb-8 font-600">Roberto <span class="text-accent">Gutiérrez O.</span></h1>
-            <p id="hero-desc" class="text-[18px] md:text-[20px] max-w-2xl opacity-80 leading-relaxed font-400">In my 15 years as a designer, I know that design is not just about looks, it helps to understand.</p>
+    <main class="w-full lg:pr-[120px]">
+        <section id="hero" class="min-h-screen flex flex-col justify-center px-8 md:px-24">
+            <h1 class="text-[42px] md:text-[72px] font-bold leading-tight">Roberto <span class="text-accent">Gutiérrez O.</span></h1>
+            <p id="hero-desc" class="text-[18px] md:text-[22px] max-w-2xl opacity-80 mt-6">In my 15 years as a designer, I know that design is not just about looks, it helps to understand.</p>
         </section>
 
-        <section id="about" class="section-padding min-h-[100svh] flex flex-col justify-center py-10">
-            <h3 id="story-title" class="text-[28px] md:text-[36px] font-700 mb-8 text-accent">// Narrative</h3>
-            <p id="story-desc" class="text-[18px] md:text-[20px] leading-relaxed max-w-3xl font-400">I transform complex problems into solutions that feel natural. My approach is not based on assumptions, but on evidence.</p>
+        <section id="about" class="min-h-screen flex flex-col justify-center px-8 md:px-24">
+            <h3 id="story-title" class="text-accent text-[24px] font-bold mb-6">// Narrative</h3>
+            <p id="story-desc" class="text-[20px] md:text-[28px] max-w-3xl leading-relaxed">I transform complex problems into solutions that feel natural. My approach is not based on assumptions, but on evidence.</p>
         </section>
 
-        <section id="skills" class="section-padding min-h-[100svh] flex flex-col justify-center py-10">
-            <h3 id="stack-title" class="text-[28px] md:text-[36px] font-700 mb-12 text-accent">// Software Stack</h3>
-            <div class="max-w-4xl space-y-4" id="stack-container">
-                <div class="software-row"><span class="text-[24px] font-700">Figma</span><span class="software-level text-[11px] text-accent uppercase font-700 tracking-widest" data-lang="exp">Experienced</span></div>
-                <div class="software-row"><span class="text-[24px] font-700">Adobe Illustrator</span><span class="software-level text-[11px] text-accent uppercase font-700 tracking-widest" data-lang="exp">Experienced</span></div>
-                <div class="software-row"><span class="text-[24px] font-700">Adobe Photoshop</span><span class="software-level text-[11px] text-accent uppercase font-700 tracking-widest" data-lang="exp">Experienced</span></div>
-                <div class="software-row"><span class="text-[24px] font-700">Adobe XD & Sketch</span><span class="software-level text-[11px] text-accent uppercase font-700 tracking-widest" data-lang="adv">Advanced</span></div>
-                <div class="software-row"><span class="text-[24px] font-700">Jira & Project Management</span><span class="software-level text-[11px] text-accent uppercase font-700 tracking-widest" data-lang="adv">Advanced</span></div>
-                <div class="software-row"><span class="text-[24px] font-700">Code (Sublime, Atom, Tailwind)</span><span class="software-level text-[11px] text-accent uppercase font-700 tracking-widest" data-lang="prof">Proficient</span></div>
+        <section id="skills" class="min-h-screen flex flex-col justify-center px-8 md:px-24">
+            <h3 id="stack-title" class="text-accent text-[24px] font-bold mb-12">// Software Stack</h3>
+            <div id="stack-container" class="space-y-6 max-w-4xl">
+                <div class="software-row flex justify-between border-b border-white/10 pb-4"><span class="text-[24px]">Figma</span><span class="text-accent text-[12px] uppercase font-bold tracking-widest self-end">Experienced</span></div>
+                <div class="software-row flex justify-between border-b border-white/10 pb-4"><span class="text-[24px]">Adobe Illustrator</span><span class="text-accent text-[12px] uppercase font-bold tracking-widest self-end">Experienced</span></div>
+                <div class="software-row flex justify-between border-b border-white/10 pb-4"><span class="text-[24px]">Adobe Photoshop</span><span class="text-accent text-[12px] uppercase font-bold tracking-widest self-end">Experienced</span></div>
+                <div class="software-row flex justify-between border-b border-white/10 pb-4"><span class="text-[24px]">Code (Tailwind, HTML, CSS)</span><span class="text-accent text-[12px] uppercase font-bold tracking-widest self-end">Proficient</span></div>
             </div>
         </section>
 
-        <section id="work" class="section-padding min-h-[100svh] flex flex-col justify-center py-10">
-            <h3 id="work-title" class="text-[28px] md:text-[36px] font-700 mb-12 text-accent">// Selected Work</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-16 w-full">
-
-                <div class="project-card group flex flex-col border border-white/10 rounded-[12px] p-4 lg:p-0 lg:border-none lg:rounded-none bg-warm-grey/5 lg:bg-transparent">
-
-                    <div class="aspect-video bg-warm-grey border border-white/10 flex items-center justify-center relative overflow-hidden transition-all duration-300 rounded-[8px]">
-                        <img src="./assets/project-covers/yt-redesign-cover.png" alt="YouTube Redesign" class="absolute inset-0 w-full h-full object-cover transition-all duration-500 lg:group-hover:scale-110 lg:group-hover:brightness-0 pointer-events-none">
-
-                        <div class="hidden lg:flex absolute inset-0 flex flex-col justify-center px-8 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-auto">
-                            <p id="project-1-desc-dk" class="text-[16px] opacity-90 leading-relaxed mb-4">Based on detected frictions, I designed new features to simplify constant tasks.</p>
-                            <div class="space-y-3 mb-6">
-                                <div>
-                                    <p id="project-1-before-title-dk" class="text-[14px] uppercase tracking-tighter font-bold text-accent/80 mb-1">Detected Problems (The Before)</p>
-                                    <p id="project-1-before-desc-dk" class="text-[16px] opacity-70 border-l border-white/20 pl-3">Difficulty navigating extensive playlists.</p>
-                                </div>
-                                <div>
-                                    <p id="project-1-after-title-dk" class="text-[14px] uppercase tracking-tighter font-bold text-accent/80 mb-1">Obtained Results (The After)</p>
-                                    <p id="project-1-after-desc-dk" class="text-[16px] opacity-70 border-l border-white/20 pl-3">30% reduction in clicks to access favorite content.</p>
-                                </div>
-                            </div>
-                            <a href="projects/yt-music/index.html" class="project-btn-label w-fit px-6 py-2 border border-accent text-accent hover:bg-accent hover:text-bg-main transition-colors text-[14px] font-bold tracking-widest uppercase rounded-full">View Project</a>
-                        </div>
+        <section id="work" class="min-h-screen flex flex-col justify-center px-8 md:px-24 py-20">
+            <h3 id="work-title" class="text-accent text-[24px] font-bold mb-12">// Selected Work</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <div class="project-card border border-white/10 rounded-2xl overflow-hidden bg-warm-grey/10 group h-fit">
+                    <div class="aspect-video relative overflow-hidden">
+                        <img src="./assets/project-covers/yt-redesign-cover.png" alt="YouTube Redesign" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                     </div>
-
-                    <div class="mt-4 lg:mt-6 flex flex-col gap-4">
-                        <h4 id="project-1-title" class="text-[20px] md:text-[24px] font-500 uppercase tracking-widest">YouTube Music Redesign</h4>
-
-                        <div class="lg:hidden flex flex-col gap-4">
-                            <p id="project-1-desc-mb" class="text-[15px] opacity-80 leading-relaxed">Based on detected frictions, I designed new features to simplify constant tasks.</p>
-                            <div class="space-y-4">
-                                <div>
-                                    <p id="project-1-before-title-mb" class="text-[12px] uppercase tracking-widest font-bold text-accent mb-1">// Detected Problems</p>
-                                    <p id="project-1-before-desc-mb" class="text-[14px] opacity-70 border-l border-accent/30 pl-3">Difficulty navigating extensive playlists.</p>
+                    <div class="p-8">
+                        <h4 class="text-[20px] font-bold uppercase tracking-wider mb-4">YouTube Music Redesign</h4>
+                        <div class="project-info-container">
+                            <p id="project-desc" class="text-[15px] opacity-70 mb-6">Based on detected frictions, I designed new features to simplify constant tasks.</p>
+                            <div class="space-y-4 mb-8">
+                                <div class="border-l-2 border-accent pl-4">
+                                    <p class="text-[12px] text-accent uppercase font-bold mb-1">// Detected Problems</p>
+                                    <p class="text-[14px] opacity-80">Difficulty navigating extensive playlists.</p>
                                 </div>
-                                <div>
-                                    <p id="project-1-after-title-mb" class="text-[12px] uppercase tracking-widest font-bold text-accent mb-1">// Obtained Results</p>
-                                    <p id="project-1-after-desc-mb" class="text-[14px] opacity-70 border-l border-accent/30 pl-3">30% reduction in clicks to access favorite content.</p>
+                                <div class="border-l-2 border-accent pl-4">
+                                    <p class="text-[12px] text-accent uppercase font-bold mb-1">// Obtained Results</p>
+                                    <p class="text-[14px] opacity-80">30% reduction in clicks to access favorite content.</p>
                                 </div>
                             </div>
-                            <a href="projects/yt-music/index.html" class="project-btn-label w-fit mt-2 px-6 py-2 border border-accent text-accent active:bg-accent active:text-bg-main transition-colors text-[13px] font-bold tracking-widest uppercase rounded-full">View Project</a>
+                            <a href="projects/yt-music/index.html" class="inline-block px-8 py-3 border border-accent text-accent rounded-full text-[13px] font-bold hover:bg-accent hover:text-bg-main transition-all uppercase tracking-widest">View Project</a>
                         </div>
                     </div>
                 </div>
-
-                <div class="project-card opacity-20 border border-dashed border-white/10 aspect-video flex items-center justify-center rounded-[12px] lg:rounded-[8px]"><span class="text-[12px] uppercase tracking-widest">Coming Soon</span></div>
-
-                <div class="project-card opacity-20 border border-dashed border-white/10 aspect-video flex items-center justify-center rounded-[12px] lg:rounded-[8px]"><span class="text-[12px] uppercase tracking-widest">Coming Soon</span></div>
             </div>
         </section>
 
-        <section id="contact" class="section-padding min-h-[100svh] flex flex-col justify-center py-10 relative overflow-hidden">
-            <h3 id="contact-title" class="text-[28px] md:text-[36px] font-700 mb-12 text-accent z-10">// Contact</h3>
-            <div class="flex flex-col gap-12 md:gap-12 z-10 relative">
-                <a href="mailto:rob@robertogoux.com" class="group flex items-center gap-4 md:gap-8 w-fit">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4EF3A1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="md:w-10 md:h-10 transition-transform group-hover:scale-110">
+        <section id="contact" class="min-h-screen flex flex-col justify-center px-8 md:px-24 relative overflow-hidden">
+            <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-[800px] h-[400px] bg-accent opacity-10 blur-[120px] rounded-full pointer-events-none"></div>
+            <h3 class="text-accent text-[24px] font-bold mb-12 relative z-10">// Contact</h3>
+            <div class="flex flex-col gap-8 relative z-10">
+                <a href="mailto:rob@robertogoux.com" class="group flex items-center gap-6 w-fit">
+                    <svg class="text-accent group-hover:scale-110 transition-transform" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <rect width="20" height="16" x="2" y="4" rx="2" />
                         <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                     </svg>
-                    <span class="text-[20px] md:text-[32px] font-normal group-hover:text-accent transition-colors duration-500 break-words">rob@robertogoux.com</span>
+                    <span class="text-[24px] md:text-[32px] group-hover:text-accent transition-colors">rob@robertogoux.com</span>
                 </a>
-                <a href="https://tinyurl.com/3h7nrskb" target="_blank" class="group flex items-center gap-4 md:gap-8 w-fit">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4EF3A1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="md:w-10 md:h-10 transition-transform group-hover:scale-110">
+                <a href="https://linkedin.com/in/robertogoux" target="_blank" class="group flex items-center gap-6 w-fit">
+                    <svg class="text-accent group-hover:scale-110 transition-transform" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
                         <rect width="4" height="12" x="2" y="9" />
                         <circle cx="4" cy="4" r="2" />
                     </svg>
-                    <span class="text-[20px] md:text-[32px] font-normal group-hover:text-accent transition-colors duration-500">LinkedIn</span>
+                    <span class="text-[24px] md:text-[32px] group-hover:text-accent transition-colors">LinkedIn</span>
                 </a>
-                <a href="https://behance.net/tu-perfil" target="_blank" class="group flex items-center gap-4 md:gap-8 w-fit">
-                    <div class="md:w-10 md:h-10 flex items-center justify-center transition-transform group-hover:scale-110">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#4EF3A1" viewBox="0 0 16 16">
-                            <path d="M4.654 3c.461 0 .887.035 1.278.14.39.07.711.216.996.391.286.176.497.426.641.747.14.32.216.711.216 1.137 0 .496-.106.922-.356 1.242-.215.32-.566.606-.997.817.606.176 1.067.496 1.348.922.281.426.42.957.42 1.59 0 .606-.118 1.145-.32 1.626-.235.481-.563.887-.997 1.208-.434.32-.953.535-1.559.673-.606.138-1.258.211-1.957.211H1v-10.61h3.654zm1.332 4.414c.403 0 .73-.11.98-.329.251-.218.375-.558.375-1.019 0-.462-.124-.793-.375-1.019-.25-.226-.577-.33-.98-.33H2.333v2.697h3.653zm.333 4.258c.453 0 .813-.122 1.082-.365.27-.243.402-.625.402-1.149 0-.52-.133-.895-.402-1.125-.269-.234-.633-.356-1.082-.356H2.333v2.995h3.653zm7.744-2.887h-3.692c.04.426.152.75.332.973.18.223.415.333.708.333.317 0 .583-.11.796-.333.216-.223.353-.54.413-.973zm.126-1.503c-.05-.415-.173-.755-.372-.996-.199-.241-.485-.363-.856-.363-.336 0-.61.122-.82.363-.211.241-.341.58-.39.996h2.438zM10.873 12c-.516 0-.977-.102-1.383-.309-.406-.207-.743-.512-.996-.915-.25-.402-.406-.902-.469-1.5a13.31 13.31 0 0 1-.031-1c0-.496.027-.957.082-1.383a4.74 4.74 0 0 1 .32-1.309c.234-.437.562-.789.985-1.055.426-.265.945-.398 1.558-.398.633 0 1.184.145 1.656.434.473.289.832.692 1.074 1.207.242.516.363 1.121.363 1.817a5.55 5.55 0 0 1-.035.632h-4.305c.035.535.176.945.422 1.23.246.286.61.426 1.082.426.43 0 .793-.105 1.09-.32.297-.215.524-.515.68-.898h1.121c-.2.601-.52 1.101-.957 1.503-.438.402-.993.602-1.668.602zM10.512 4.312h3.293v.781h-3.293v-.781z" />
-                        </svg>
-                    </div>
-                    <span class="text-[20px] md:text-[32px] font-normal group-hover:text-accent transition-colors duration-500">Behance</span>
+                <a href="https://behance.net/robertogoux" target="_blank" class="group flex items-center gap-6 w-fit">
+                    <svg class="text-accent group-hover:scale-110 transition-transform" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 12a2 2 0 1 0 0 4h3V8H9a2 2 0 1 0 0 4z" />
+                        <path d="M13 12h3" />
+                        <path d="M18 10h3" />
+                        <path d="M18 12h3" />
+                    </svg>
+                    <span class="text-[24px] md:text-[32px] group-hover:text-accent transition-colors">Behance</span>
                 </a>
             </div>
-            <div class="cosmic-light-glow cosmic-active"></div>
         </section>
     </main>
 
