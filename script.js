@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const translations = {
         ESP: {
+            role: "Hago diseño UX/UI (entre otras cosas 😎)",
             hero: "Con más de 15 años de experiencia, he aprendido que el diseño trasciende la estética; es el puente estratégico entre los objetivos comerciales y las necesidades de los usuarios. Mi objetivo es crear productos que generen resultados y al mismo tiempo hagan que el usuario se sienta comprendido y empoderado. <span class='text-accent'>Gracias por estar aquí 😁</span>",
             storyTitle: "/ Mindset",
             storyDesc:
@@ -34,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
             btn: "ENG",
         },
         ENG: {
+            role: "I make UX/UI design (among others 😎)",
             hero: "With 15+ years of experience, I’ve learned that design transcends aesthetics; it is the strategic bridge between business goals and user needs. My focus is creating products that drive results while making the user feel understood and empowered. <span class='text-accent'>Thanks for being here 😁</span>",
             storyTitle: "/ Mindset",
             storyDesc:
@@ -64,6 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const t = translations[currentLang];
 
         // Textos de Secciones
+        document.getElementById("role").innerHTML = t.role;
         document.getElementById("hero-desc").innerHTML = t.hero;
         document.getElementById("story-title").innerText = t.storyTitle;
         document.getElementById("story-desc").innerText = t.storyDesc;
