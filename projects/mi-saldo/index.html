@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/png" href="../../assets/logo/1-0534235e.ico">
+    <title>Mi Saldo - UX Case Study</title>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+</head>
+
+<body class="light-theme">
+
+    <style>
+        .back-btn-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(20, 46, 184, 0.2);
+            border-radius: 100px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .back-btn-link:hover .back-btn-container {
+            background: #142eb8 !important;
+            border-color: #142eb8 !important;
+            transform: scale(1.05);
+        }
+
+        .back-btn-link:hover .back-icon {
+            stroke: white !important;
+        }
+
+        .back-btn-link:hover .back-text {
+            color: white !important;
+        }
+    </style>
+
+    <div style="position: fixed; top: 24px; left: 24px; z-index: 9999;">
+        <a href="../../index.html" class="back-btn-link" style="text-decoration: none;">
+            <div class="back-btn-container shadow-sm">
+                <svg class="back-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#142eb8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="transition: all 0.3s ease;">
+                    <path d="M19 12H5m7-7l-7 7 7 7" />
+                </svg>
+                <span class="translate back-text" data-en="BACK" data-es="VOLVER" style="font-family: 'Archivo', sans-serif; font-size: 10px; font-weight: 700; color: #142eb8; letter-spacing: 0.1em; transition: all 0.3s ease;">
+                    VOLVER
+                </span>
+            </div>
+        </a>
+    </div>
+
+    <div class="fixed top-4 right-4 md:top-6 md:right-6 z-50 flex gap-3">
+        <button id="lang-toggle" class="w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden border border-zinc-300 bg-white/80 backdrop-blur-sm flex items-center justify-center p-0 shadow-sm">
+            <span id="lang-flag-container" class="w-full h-full"></span>
+        </button>
+        <button id="theme-toggle" class="w-10 h-10 md:w-12 md:h-12 rounded-full border border-zinc-300 bg-white/80 backdrop-blur-sm flex items-center justify-center text-[#142eb8] shadow-sm">
+            <span id="theme-icon-container" class="w-5 h-5 flex items-center justify-center"></span>
+        </button>
+    </div>
+
+    <main id="main-content">
+        <section id="section-0" class="section-page px-6">
+            <div class="w-full max-w-4xl mx-auto flex flex-col items-center text-center space-y-8">
+                <p class="text-[10px] md:text-xl font-medium opacity-60 tracking-[0.2em] uppercase">UX Case Study</p>
+                <h1 class="text-4xl md:text-8xl font-bold leading-tight tracking-tighter">
+                    <span style="color: #142eb8 !important;">Mi Saldo:</span><br>
+                    <span class="translate" data-es="Rediseñando la movilidad en ZMG." data-en="Redesigning mobility in ZMG.">Redesigning mobility in ZMG.</span>
+                </h1>
+                <p class="text-[16px] md:text-xl opacity-80 max-w-lg translate" data-es="Eliminando la fricción en el proceso de recarga NFC y consulta de saldo." data-en="Eliminating friction in the NFC top-up and balance inquiry process.">Eliminating friction in the NFC top-up and balance inquiry process.</p>
+                <p class="text-[12px] md:text-base opacity-80 max-w-lg translate py-4 text-[#142eb8] bg-blue-50 dark:bg-zinc-900 rounded-lg px-6" data-es="Propuesta de rediseño enfocada en accesibilidad y claridad transaccional." data-en="Redesign proposal focused on accessibility and transactional clarity.">Redesign proposal focused on accessibility and transactional clarity.</p>
+
+                <div class="flex flex-col md:flex-row gap-4 mt-8">
+                    <a href="https://figma.fun/qKYyFC" target="_blank" class="btn-outline-figma">
+                        <svg width="16" height="24" viewBox="0 0 38 57" fill="none">
+                            <path d="M19 28.5C19 23.235 23.235 19 28.5 19C33.765 19 38 23.235 38 28.5C38 33.765 33.765 38 28.5 38C23.235 38 19 33.765 19 28.5Z" fill="#1ABCFE" />
+                            <path d="M0 47.5C0 42.235 4.235 38 9.5 38H19V47.5C19 52.765 14.765 57 9.5 57C4.235 57 0 52.765 0 47.5Z" fill="#0ACF83" />
+                            <path d="M19 0H28.5C33.765 0 38 4.235 38 9.5C38 14.765 33.765 19 28.5 19H19V0Z" fill="#FF7262" />
+                            <path d="M0 9.5C0 4.235 4.235 0 9.5 0H19V19H9.5C4.235 19 0 14.765 0 9.5Z" fill="#F24E1E" />
+                            <path d="M0 28.5C0 23.235 4.235 19 9.5 19H19V38H9.5C4.235 38 0 33.765 0 28.5Z" fill="#A259FF" />
+                        </svg>
+                        <span class="translate" data-es="FIGMA FILE" data-en="FIGMA FILE">FIGMA FILE</span>
+                    </a>
+                    <button onclick="goToSection(1)" class="btn-primary translate" data-es="Explorar Proceso" data-en="Explore Process">Explore Process</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="section-1" class="section-page px-6">
+            <div class="w-full max-w-xl md:max-w-6xl mx-auto flex flex-col items-center text-center">
+                <div class="w-full aspect-video rounded-xl mb-4 md:mb-8 bg-zinc-100 border border-zinc-200 flex items-center justify-center overflow-hidden">
+                    <img src="./assets/overview-web.png" alt="overview" class="w-full h-full object-cover">
+                </div>
+                <h2 class="text-[10px] font-bold opacity-50 uppercase tracking-[0.3em] mb-2 md:mb-4 translate" data-es="01. Enfoque e Impacto" data-en="01. My Approach & Impact">01. My Approach & Impact</h2>
+                <h3 class="text-[20px] md:text-4xl font-bold mb-2 md:mb-4 translate" data-es="Claridad en cada transacción." data-en="Clarity in every transaction.">Clarity in every transaction.</h3>
+                <p class="text-[16px] md:text-lg opacity-70 max-w-2xl mb-6 md:mb-8 translate" data-es="El objetivo fue eliminar la ambigüedad visual. Al simplificar el flujo de recarga y unificar el lenguaje visual de los saldos, logramos una experiencia sin errores:" data-en="The goal was to eliminate visual ambiguity. By streamlining the top-up flow and unifying the visual language of balances, we achieved an error-free experience:">The goal was to eliminate visual ambiguity. By streamlining the top-up flow and unifying the visual language of balances, we achieved an error-free experience:</p>
+                <div class="grid grid-cols-2 gap-4 w-full max-w-lg">
+                    <div class="stats-card-centered p-4 md:p-8 rounded-xl">
+                        <p class="metric-number text-4xl md:text-6xl">100%</p>
+                        <p class="instruction-text translate" data-es="Certeza de Saldo" data-en="Balance Certainty">Balance Certainty</p>
+                    </div>
+                    <div class="stats-card-centered p-4 md:p-8 rounded-xl">
+                        <p class="metric-number text-4xl md:text-6xl">-60%</p>
+                        <p class="instruction-text translate" data-es="Tiempo de Recarga" data-en="Top-up Time">Top-up Time</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section-2" class="section-page px-6">
+            <div class="w-full max-w-6xl mx-auto flex flex-col items-center text-center py-4 md:py-20 h-full justify-center">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 w-full mb-6 md:mb-12">
+                    <div class="aspect-square rounded-xl bg-zinc-100 border border-zinc-200 flex items-center justify-center overflow-hidden">
+                        <img src="./assets/mockup-ms.png" class="w-full h-full object-cover">
+                    </div>
+                    <div class="hidden md:flex aspect-square rounded-xl bg-zinc-100 border border-zinc-200 items-center justify-center overflow-hidden">
+                        <img src="./assets/student-user-persona.png" class="w-full h-full object-cover">
+                    </div>
+                    <div class="hidden md:flex aspect-square rounded-xl bg-zinc-100 border border-zinc-200 items-center justify-center overflow-hidden">
+                        <img src="./assets/exchange-user.png" class="w-full h-full object-cover">
+                    </div>
+                    <div class="hidden md:flex aspect-square rounded-xl bg-zinc-100 border border-zinc-200 items-center justify-center overflow-hidden">
+                        <img src="./assets/senior.jpg" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <h2 class="text-[10px] font-bold opacity-50 uppercase tracking-[0.3em] mb-1 md:mb-2 translate" data-es="02. El Problema" data-en="02. The Problem">02. The Problem</h2>
+                <h3 class="text-[20px] md:text-4xl font-bold mb-2 md:mb-3 translate" data-es="Fricción en Movimiento." data-en="Friction in Motion.">Friction in Motion.</h3>
+
+                <div class="grid grid-cols-3 gap-2 md:gap-6 w-full max-w-6xl">
+                    <div class="stats-card p-4 md:p-10 rounded-2xl md:rounded-[40px] w-full text-center items-center">
+                        <p class="persona-name text-lg md:text-2xl font-bold">Andrea, 16</p>
+                        <p class="instruction-text mb-2 md:mb-4 translate" data-es="Usuario Diario familiarizado con tecnología" data-en="Daily Commuter Used to Tech">Daily Commuter Used to Tech</p>
+                        <p class="text-[12px] md:text-sm leading-[1.5] opacity-80 translate" data-es="Considera que la aplicación es de baja calidad, poco profesional y confusa debido al etiquetado ambiguo de los botones. <br><span class='block underline font-semibold mt-2'>Después del rediseño:</span> Logra entender el layout y función de cada sección y componentes." data-en="Sees the app as low-quality, unprofessional, and confusing due to ambiguous button labeling. <br><span class='block underline font-semibold mt-2'>After redesign:</span> Understands the app layout and flow clearly.">
+                            Sees the app as low-quality, unprofessional, and confusing due to ambiguous button labeling. <br><span class='block underline font-semibold mt-2'>After redesign:</span> Understands the app layout and flow clearly.
+                        </p>
+                    </div>
+
+                    <div class="stats-card p-4 md:p-10 rounded-2xl md:rounded-[40px] w-full text-center items-center">
+                        <p class="persona-name text-lg md:text-2xl font-bold">Liam, 22</p>
+                        <p class="instruction-text mb-2 md:mb-4 translate" data-es="Estudiante de intercambio" data-en="Exchange student">Exchange student</p>
+                        <p class="text-[12px] md:text-sm leading-[1.5] opacity-80 translate" data-es="Aunque está familiarizado con la tecnología, no encuentra la función para cambiar de idioma, mientras que cree que la app es confusa en general. <br><span class='block underline font-semibold mt-2'>Después del rediseño:</span> La ubicación de opciones y el layout general le parece fácil de usar." data-en="Although he is familiar with the technology, he cannot find the function to change the language, while he thinks the app is confusing in general. <br><span class='block underline font-semibold mt-2'>After redesign:</span> Options location and layout are intuitive.">
+                            Although he is familiar with the technology, he cannot find the function to change the language, while he thinks the app is confusing in general. <br><span class='block underline font-semibold mt-2'>After redesign:</span> Options location and layout are intuitive.
+                        </p>
+                    </div>
+
+                    <div class="stats-card p-4 md:p-10 rounded-2xl md:rounded-[40px] w-full text-center items-center">
+                        <p class="persona-name text-lg md:text-2xl font-bold">Ricardo, 68</p>
+                        <p class="instruction-text mb-2 md:mb-4 translate" data-es="Estudiante de intercambio" data-en="Exchange student">Construction worker</p>
+                        <p class="text-[12px] md:text-sm leading-[1.5] opacity-80 translate" data-es="Encuentra el proceso demasiado complejo, lo que le lleva a depender de la asistencia o de las tiendas de otras personas, lo que hace que la aplicación sea inútil para él. <br><span class='block underline font-semibold mt-2'>Después del rediseño:</span> Ahora puede ver mejor botones y texto, pero más aún, le es fácil de entender el uso de la app." data-en="Finds the process too complex, leading to reliance on other persons assistance or stores, rendering the app useless for him. <br><span class='block underline font-semibold mt-2'>After redesign:</span> Now you can see buttons and text better, but even more so, it is easy to understand how to use the app.">
+                            Finds the process too complex, leading to reliance on other persons assistance or stores, rendering the app useless for him. <br><span class='block underline font-semibold mt-2'>After redesign:</span> Now he can see buttons and text better, but even more so, it is easy to understand how to use the app.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section-3" class="section-page px-6">
+            <div class="w-full max-w-xl md:max-w-6xl mx-auto flex flex-col items-center text-center">
+                <div class="w-full aspect-video rounded-xl mb-4 md:mb-8 bg-zinc-100 border border-zinc-200 flex items-center justify-center overflow-hidden">
+                    <img src="./assets/arch.png" class="w-full h-full object-cover">
+                </div>
+                <h2 class="text-[10px] font-bold opacity-50 uppercase tracking-[0.3em] mb-2 md:mb-4 translate" data-es="03. La Solución" data-en="03. The Solution">03. La Solución</h2>
+                <h3 class="text-[20px] md:text-4xl font-bold mb-2 md:mb-4 translate" data-es="Arquitectura Transparente." data-en="Transparent Architecture.">Transparent Architecture.</h3>
+                <p class="text-[16px] md:text-lg opacity-70 max-w-4xl mb-6 md:mb-8 translate" data-es="Reduje la carga cognitiva mediante un flujo de recarga lineal de 3 pasos, eliminando elementos innecesarios y priorizando la acción principal." data-en="I reduced cognitive load through a linear 3-step top-up flow, eliminating unnecessary elements and prioritizing the primary action.">I reduced cognitive load through a linear 3-step top-up flow, eliminating unnecessary elements and prioritizing the primary action.</p>
+                <div class="grid grid-cols-1 gap-4 w-full max-w-3xl mb-4">
+                    <div class="stats-card p-6 rounded-2xl text-left items-start" style="border: 1px solid #142eb8 !important;">
+                        <p class="text-[16px] leading-relaxed translate" data-es="Clara diferenciación de conceptos: uso de color y jerarquía para separar fondos en la app y crédito en la tarjeta. El flujo obtuvo un diseño intuitivo, para que los usuarios puedan agregar dinero fácilmente a los fondos de su cuenta y luego a sus tarjetas a través de NFC, tal como está previsto." data-en="Clear balance differentiation: Using color and hierarchy to separate account vs. card. The flow got an intuitive design, so users can easily add money to their account funds and then to their cards via NFC, just the way it is intended.">Clear balance differentiation: Using color and hierarchy to separate account vs. card. The flow got an intuitive design, so users can easily add money to their account funds and then to their cards via NFC, just the way it is intended.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section-4" class="section-page px-6 flex items-center justify-center">
+            <div class="w-full max-w-6xl mx-auto flex flex-col items-center text-center md:text-left">
+                <div class="w-full aspect-video rounded-xl bg-zinc-100 border border-zinc-200 flex items-center justify-center overflow-hidden mb-8 md:mb-12">
+                    <img src="./assets/overview-web.png" class="w-full h-full object-cover" alt="Success Mockups">
+                </div>
+                <div class="w-full grid grid-cols-1 md:grid-cols-12 gap-8 items-center md:items-start">
+                    <div class="md:col-span-4 space-y-4">
+                        <h2 class="text-[10px] font-bold opacity-50 uppercase tracking-[0.3em] flex items-center justify-center md:justify-start gap-2">
+                            🚀 <span>Zero Friction Results</span>
+                        </h2>
+                        <h3 class="text-2xl md:text-5xl font-bold translate" data-es="Diseñado para la vida real." data-en="Designed for real life.">Designed for real life.</h3>
+                        <p class="text-sm md:text-lg opacity-70 translate" data-es="Al optimizar el contraste y simplificar los pasos, resolvemos la ansiedad del usuario en el transporte público." data-en="By optimizing contrast and simplifying steps, we resolve user anxiety in public transit environments.">By optimizing contrast and simplifying steps, we resolve user anxiety in public transit environments.</p>
+                    </div>
+                    <div class="md:col-span-8 grid grid-cols-1 gap-8">
+                        <div class="flex flex-col md:flex-row gap-4 items-center md:items-stretch">
+                            <div class="w-full md:w-1 bg-[#142eb8] h-1 md:h-auto"></div>
+                            <div class="text-center md:text-left">
+                                <p class="profile-label font-bold text-xs uppercase mb-1">ACCESSIBILITY FIRST</p>
+                                <p class="text-[10px] md:text-sm opacity-60 leading-relaxed translate" data-es="Implementación del modelo APCA para asegurar que los montos de saldo sean legibles bajo cualquier condición lumínica en la calle." data-en="Implementation of the APCA model to ensure balance amounts are readable under any street lighting conditions.">
+                                    Implementation of the APCA model to ensure balance amounts are readable under any street lighting conditions.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col md:flex-row gap-4 items-center md:items-stretch">
+                            <div class="w-full md:w-1 bg-[#FFCE00] h-1 md:h-auto"></div>
+                            <div class="text-center md:text-left">
+                                <p class="profile-label font-bold text-xs uppercase mb-1">TRANSACTIONAL TRUST</p>
+                                <p class="text-[10px] md:text-sm opacity-60 leading-relaxed translate" data-es="Flujos de recarga validados en 3 segundos, reduciendo la incertidumbre y las filas en las estaciones." data-en="Top-up flows validated in 3 seconds, reducing uncertainty and queues at stations.">
+                                    Top-up flows validated in 3 seconds, reducing uncertainty and queues at stations.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section-5" class="section-page px-6">
+            <div class="w-full max-w-4xl mx-auto flex flex-col items-center text-center">
+                <h2 class="text-4xl md:text-7xl font-bold mb-8 translate" data-es="Gracias por tu tiempo." data-en="Thanks for your time.">Thanks for your time.</h2>
+                <div class="mb-12">
+                    <a href="https://figma.fun/qKYyFC" target="_blank" class="btn-outline-figma">
+                        <svg width="16" height="24" viewBox="0 0 38 57" fill="none">
+                            <path d="M19 28.5C19 23.235 23.235 19 28.5 19C33.765 19 38 23.235 38 28.5C38 33.765 33.765 38 28.5 38C23.235 38 19 33.765 19 28.5Z" fill="#1ABCFE" />
+                            <path d="M0 47.5C0 42.235 4.235 38 9.5 38H19V47.5C19 52.765 14.765 57 9.5 57C4.235 57 0 52.765 0 47.5Z" fill="#0ACF83" />
+                            <path d="M19 0H28.5C33.765 0 38 4.235 38 9.5C38 14.765 33.765 19 28.5 19H19V0Z" fill="#FF7262" />
+                            <path d="M0 9.5C0 4.235 4.235 0 9.5 0H19V19H9.5C4.235 19 0 14.765 0 9.5Z" fill="#F24E1E" />
+                            <path d="M0 28.5C0 23.235 4.235 19 9.5 19H19V38H9.5C4.235 38 0 33.765 0 28.5Z" fill="#A259FF" />
+                        </svg>
+                        <span class="translate" data-es="FIGMA FILE" data-en="FIGMA FILE">FIGMA FILE</span>
+                    </a>
+                </div>
+                <div class="flex gap-6">
+                    <a href="https://tinyurl.com/3h7nrskb" target="_blank" class="w-14 h-14 rounded-full border border-zinc-200 flex items-center justify-center font-bold hover:bg-[#142eb8] hover:text-white transition-colors cursor-pointer shadow-sm">
+                        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+                    <a href="https://tinyurl.com/2yxt55y9" target="_blank" class="w-14 h-14 rounded-full border border-zinc-200 flex items-center justify-center font-bold hover:bg-[#142eb8] hover:text-white transition-colors cursor-pointer text-sm shadow-sm">CV</a>
+                </div>
+            </div>
+        </section>
+
+        <div id="navigation-hint" class="fixed bottom-8 left-8 right-8 z-40 flex items-center pointer-events-none transition-opacity duration-300">
+            <div class="flex items-center gap-3">
+                <div class="md:hidden flex flex-col items-center">
+                    <svg class="w-4 h-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11l5-5m0 0l5 5m-5-5v12"></path>
+                    </svg>
+                    <svg class="w-4 h-4 opacity-50 -mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 13l-5 5m0 0l-5-5m5 5V6"></path>
+                    </svg>
+                </div>
+                <div class="hidden md:flex flex-col gap-1">
+                    <div class="key-cap">▲</div>
+                    <div class="key-cap">▼</div>
+                </div>
+                <span class="instruction-text text-[10px] uppercase opacity-50">
+                    <span class="md:hidden translate" data-es="DESLIZA" data-en="SLIDE">SLIDE</span>
+                    <span class="hidden md:inline translate" data-es="Utiliza flechas o scroll" data-en="Use arrows or scroll">Use arrows or scroll</span>
+                </span>
+            </div>
+        </div>
+
+        <button id="back-to-top" onclick="goToSection(0)" class="fixed bottom-8 left-1/2  z-50 opacity-0 pointer-events-none transition-all duration-300 btn-primary flex items-center gap-2 " data-es="VOLVER AL INICIO" data-en="BACK TO START">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+            </svg>
+            <span class="translate" data-es="VOLVER AL INICIO" data-en="BACK TO START">BACK TO START</span>
+        </button>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
