@@ -10,21 +10,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const translations = {
         ESP: {
-            hero: "En mis 15 años como diseñador, sé que el diseño no es solo cómo se ve, ayuda a entender.",
-            storyTitle: "// Narrativa",
+            hero: "Con más de 15 años de experiencia, he aprendido que el diseño trasciende la estética; es el puente estratégico entre los objetivos comerciales y las necesidades de los usuarios. Mi objetivo es crear productos que generen resultados y al mismo tiempo hagan que el usuario se sienta comprendido y empoderado. <span class='text-accent'>Gracias por estar aquí 😁</span>",
+            storyTitle: "/ Mindset",
             storyDesc:
-                "Transformo problemas complejos en soluciones que se sienten naturales. Mi enfoque no se basa en suposiciones, sino en evidencia.",
-            stackTitle: "// Software Stack",
-            workTitle: "// Trabajo Seleccionado",
-            contactTitle: "// Contacto",
+                "Creo que un gran diseño es el resultado de una comprensión profunda. Transformo desafíos complejos en experiencias intuitivas al alinear las necesidades del usuario con los objetivos comerciales, utilizando los datos como brújula y la empatía como herramienta para crear soluciones que se sienten como algo natural.",
+            stackTitle: "/ Software Stack",
+            workTitle: "/ He estado trabajando en:",
+            contactTitle: "/ Contacto",
             projectDesc:
                 "Basado en fricciones detectadas, diseñé nuevas funciones para simplificar tareas constantes.",
-            probTitle: "// Problemas Detectados",
-            resTitle: "// Resultados Obtenidos",
+            probTitle: "/ Problemas Detectados",
+            resTitle: "/ Resultados Obtenidos",
             btnView: "Ver Proyecto",
             // Navs
             nStart: "INICIO",
-            nStory: "HISTORIA",
+            nStory: "MINDSET",
             nStack: "STACK",
             nWork: "TRABAJO",
             nContact: "CONTACTO",
@@ -34,21 +34,21 @@ document.addEventListener("DOMContentLoaded", () => {
             btn: "ENG",
         },
         ENG: {
-            hero: "In my 15 years as a designer, I know that design is not just about looks, it helps to understand.",
-            storyTitle: "// Narrative",
+            hero: "With 15+ years of experience, I’ve learned that design transcends aesthetics; it is the strategic bridge between business goals and user needs. My focus is creating products that drive results while making the user feel understood and empowered. <span class='text-accent'>Thanks for being here 😁</span>",
+            storyTitle: "/ Mindset",
             storyDesc:
-                "I transform complex problems into solutions that feel natural. My approach is not based on assumptions, but on evidence.",
-            stackTitle: "// Software Stack",
-            workTitle: "// Selected Work",
-            contactTitle: "// Contact",
+                "I believe that great design is the result of deep understanding. I transform complex challenges into intuitive experiences by aligning user needs with business goals, using data as a compass and empathy as a tool to create solutions that feel second nature.",
+            stackTitle: "/ Software Stack",
+            workTitle: "/ I've been working on:",
+            contactTitle: "/ Contact",
             projectDesc:
                 "Based on detected frictions, I designed new features to simplify constant tasks.",
-            probTitle: "// Detected Problems",
-            resTitle: "// Obtained Results",
+            probTitle: "/ Detected Problems",
+            resTitle: "/// Obtained Results",
             btnView: "View Project",
             // Navs
             nStart: "START",
-            nStory: "STORY",
+            nStory: "MINDSET",
             nStack: "STACK",
             nWork: "WORK",
             nContact: "CONTACT",
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const t = translations[currentLang];
 
         // Textos de Secciones
-        document.getElementById("hero-desc").innerText = t.hero;
+        document.getElementById("hero-desc").innerHTML = t.hero;
         document.getElementById("story-title").innerText = t.storyTitle;
         document.getElementById("story-desc").innerText = t.storyDesc;
         document.getElementById("stack-title").innerText = t.stackTitle;
