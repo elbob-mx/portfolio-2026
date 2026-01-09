@@ -91,12 +91,11 @@
             <h1 class="text-[34px] md:text-[72px] font-bold leading-tight">Roberto <span class="text-accent">Gutiérrez O.</span></h1>
             <p id="role" class="text-[16px] md:text-[32px] opacity-50 max-w-3xl mb-8 leading-loose">I make UX/UI design (among others 😎)</p>
             <p id="hero-desc" class="text-[18px] md:text-[22px] max-w-3xl opacity-80 mt-6 leading-loose">With 15+ years of experience, I’ve learned that design transcends aesthetics; it is the <span class="text-accent">strategic bridge between business goals and user needs</span>. My focus is creating products that drive results while making the user feel understood and empowered. <span class="text-accent">Thanks for being here 😁.</span></p>
-            <!-- <div class="border-b-2 opacity-20 pt-4 md:hidden"></div> -->
         </section>
 
         <section id="about" class="min-h-screen flex flex-col justify-center px-8 md:px-24">
             <h3 id="story-title" class="text-accent text-[32px] font-bold mb-6">/ Mindset</h3>
-            <p id="story-desc" class="text-[20px] md:text-[28px] max-w-3xl leading-relaxed">I believe that great design is the result of deep understanding. I transform complex challenges into intuitive experiences by aligning user needs with business goals, using data as a compass and empathy as a tool to create solutions that feel second nature.</p>
+            <p id="story-desc" class="text-[20px] md:text-[28px] max-w-3xl leading-relaxed">I believe that great design is the result of deep understanding. I transform complex challenges into intuitive experiences by <span class='text-accent'>aligning user needs with business goals,</span> using data as a compass and empathy as a tool to create solutions that feel second nature.</p>
         </section>
 
         <section id="skills" class="min-h-screen flex flex-col justify-center px-8 md:px-24">
@@ -109,8 +108,8 @@
                 <div class="software-row flex justify-between border-b border-white/10 pb-4"><span class="text-[20px]">Adobe Photoshop</span><span class="text-accent text-[12px] uppercase font-bold tracking-widest self-end skill-label">Proficient</span></div>
             </div>
 
-            <h3 id="stack-title" class="text-accent text-[24px] font-bold mt-12 mb-6">/ Soft Skills</h3>
-            <div id="stack-container" class="space-y-6 max-w-4xl">
+            <h3 id="soft-skills-title" class="text-accent text-[24px] font-bold mt-12 mb-6">/ Soft Skills</h3>
+            <div class="space-y-6 max-w-4xl">
                 <div class="software-row flex justify-between border-b border-white/10 pb-4"><span class="text-[20px]">User-Centered Design</span><span class="text-accent text-[12px] uppercase font-bold tracking-widest self-end skill-label">Experienced</span></div>
                 <div class="software-row flex justify-between border-b border-white/10 pb-4"><span class="text-[20px]">WCAG/APCA Accessibility</span><span class="text-accent text-[12px] uppercase font-bold tracking-widest self-end skill-label">Proficient</span></div>
                 <div class="software-row flex justify-between border-b border-white/10 pb-4"><span class="text-[20px]">Client Communication</span><span class="text-accent text-[12px] uppercase font-bold tracking-widest self-end skill-label">Proficient</span></div>
@@ -122,7 +121,6 @@
             <h3 id="work-title" class="text-accent text-[24px] font-bold mb-12">/ Selected Work</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
 
-                <!-- YOUTUBE MUSIC -->
                 <div class="project-card border border-white/10 rounded-2xl overflow-hidden bg-warm-grey/10 group h-fit">
                     <div class="aspect-video relative overflow-hidden">
                         <img src="./assets/project-covers/yt-redesign-cover.png" alt="YouTube Redesign" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
@@ -130,57 +128,54 @@
                     <div class="p-8">
                         <h4 class="text-[20px] font-bold uppercase tracking-wider mb-4">YouTube Music Redesign</h4>
                         <div class="project-info-container">
-                            <p id="project-desc" class="text-[15px] opacity-70 mb-6">Based on detected frictions, I designed new features to simplify constant tasks.</p>
+                            <p id="yt-desc" class="text-[15px] opacity-70 mb-6">Based on detected frictions, I designed new features to simplify constant tasks.</p>
                             <div class="space-y-4 mb-8">
                                 <div class="border-l-2 border-accent pl-4">
-                                    <p id="prob-title" class="text-[12px] text-accent uppercase font-bold mb-1">// Detected Problems</p>
-                                    <p class="text-[14px] opacity-80">Difficulty navigating extensive playlists, save content on multiple playlists and visual noise.</p>
+                                    <p class="prob-label text-[12px] text-accent uppercase font-bold mb-1">// Detected Problems</p>
+                                    <p id="yt-prob" class="text-[14px] opacity-80">Difficulty navigating extensive playlists, save content on multiple playlists and visual noise.</p>
                                 </div>
                                 <div class="border-l-2 border-accent pl-4">
-                                    <p id="res-title" class="text-[12px] text-accent uppercase font-bold mb-1">// Obtained Results</p>
-                                    <p class="text-[14px] opacity-80">Reduction in clicks to save content, create playlists and an overall better hierarchization.I implemented a new way to edit Home sections to reduce visual noise.</p>
+                                    <p class="res-label text-[12px] text-accent uppercase font-bold mb-1">// Obtained Results</p>
+                                    <p id="yt-res" class="text-[14px] opacity-80">Reduction in clicks to save content, create playlists and an overall better hierarchization.</p>
                                 </div>
                             </div>
-                            <a id="btn-view" href="projects/yt-music/index.html" class="inline-block px-8 py-3 border border-accent text-accent rounded-full text-[13px] font-bold hover:bg-accent hover:text-bg-main transition-all uppercase tracking-widest">View Project</a>
+                            <a id="btn-view-yt" href="projects/yt-music/index.html" class="inline-block px-8 py-3 border border-accent text-accent rounded-full text-[13px] font-bold hover:bg-accent hover:text-bg-main transition-all uppercase tracking-widest btn-text-view">View Project</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- MI SALDO -->
                 <div class="project-card border border-white/10 rounded-2xl overflow-hidden bg-warm-grey/10 group h-fit">
                     <div class="aspect-video relative overflow-hidden">
-                        <img src="./assets/project-covers/misaldo-project-cover.png" alt="YouTube Redesign" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <img src="./assets/project-covers/misaldo-project-cover.png" alt="Mi Saldo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                     </div>
                     <div class="p-8">
                         <h4 class="text-[20px] font-bold uppercase tracking-wider mb-4">Mi Saldo App Redesign</h4>
                         <div class="project-info-container">
-                            <p id="project-desc" class="text-[15px] opacity-70 mb-6">Optimization of the NFC transactional flow to reduce user errors and improve readability in high mobility environments.</p>
+                            <p id="ms-desc" class="text-[15px] opacity-70 mb-6">Optimization of the NFC transactional flow to reduce user errors and improve readability in high mobility environments.</p>
                             <div class="space-y-4 mb-8">
                                 <div class="border-l-2 border-accent pl-4">
-                                    <p id="prob-title" class="text-[12px] text-accent uppercase font-bold mb-1">// Detected Problems</p>
-                                    <p class="text-[14px] opacity-80">Ambiguous recharge flows and lack of visual distinction between account balance and physical card credit, leading to user frustration</p>
+                                    <p class="prob-label text-[12px] text-accent uppercase font-bold mb-1">// Detected Problems</p>
+                                    <p id="ms-prob" class="text-[14px] opacity-80">Ambiguous recharge flows and lack of visual distinction between account balance and physical card credit.</p>
                                 </div>
                                 <div class="border-l-2 border-accent pl-4">
-                                    <p id="res-title" class="text-[12px] text-accent uppercase font-bold mb-1">// Obtained Results</p>
-                                    <p class="text-[14px] opacity-80">Implementation of a streamlined 3-step recharge flow with immediate NFC haptic/visual feedback, significantly reducing cognitive load and transaction uncertainty.</p>
+                                    <p class="res-label text-[12px] text-accent uppercase font-bold mb-1">// Obtained Results</p>
+                                    <p id="ms-res" class="text-[14px] opacity-80">Implementation of a streamlined 3-step recharge flow with immediate NFC haptic/visual feedback.</p>
                                 </div>
                             </div>
-                            <a id="btn-view" href="projects/mi-saldo/index.html" class="inline-block px-8 py-3 border border-accent text-accent rounded-full text-[13px] font-bold hover:bg-accent hover:text-bg-main transition-all uppercase tracking-widest">View Project</a>
+                            <a id="btn-view-ms" href="projects/mi-saldo/index.html" class="inline-block px-8 py-3 border border-accent text-accent rounded-full text-[13px] font-bold hover:bg-accent hover:text-bg-main transition-all uppercase tracking-widest btn-text-view">View Project</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- PARASOL -->
                 <div class="project-card border border-white/10 rounded-2xl overflow-hidden bg-warm-grey/10 group h-fit">
                     <div class="aspect-video relative overflow-hidden">
-                        <img src="./assets/project-covers/parasol-project-cover.png" alt="YouTube Redesign" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <img src="./assets/project-covers/parasol-project-cover.png" alt="Parasol" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                     </div>
                     <div class="p-8">
-                        <h4 class="text-[20px] font-bold uppercase tracking-wider mb-4">Parasol Furniture Gallery Website Design</h4>
+                        <h4 class="text-[20px] font-bold uppercase tracking-wider mb-4">Parasol Furniture Gallery</h4>
                         <div class="project-info-container">
-                            <p id="project-desc" class="text-[15px] opacity-70 mb-6">Informative digital showroom optimized for high visual impact with a low operational budget intended for senior clients buying summer homes in Los Cabos, Mexico, seeking "beach house" style furniture. <br><br>
-                                Moving from employee to entrepreneur, the client had a limited budget. She needed solutions that adapted to her evolving finances.</p>
-                            <a id="btn-view" href="./projects/parasol/index.html" target="_blank" class="inline-block px-8 py-3 border border-accent text-accent rounded-full text-[13px] font-bold hover:bg-accent hover:text-bg-main transition-all uppercase tracking-widest">View Site</a>
+                            <p id="ps-desc" class="text-[15px] opacity-70 mb-6">The client needed a showroom that appealed to senior clients buying summer homes in Los Cabos, Mexico, seeking 'beach house' style furniture. To protect her economy, we set a bi-weekly schedule where I edit and upload 10-15 images, avoiding a single large upfront cost.</p>
+                            <a id="btn-view-ps" href="./projects/parasol/index.html" target="_blank" class="inline-block px-8 py-3 border border-accent text-accent rounded-full text-[13px] font-bold hover:bg-accent hover:text-bg-main transition-all uppercase tracking-widest btn-text-view">View Project</a>
                         </div>
                     </div>
                 </div>
@@ -189,7 +184,6 @@
 
         <section id="contact" class="min-h-screen flex flex-col justify-center px-8 md:px-24 relative overflow-hidden">
             <div class="glow-breathing absolute bottom-0 left-0 w-full h-[100px] bg-accent opacity-5 blur-[100px] pointer-events-none"></div>
-
             <h3 id="contact-title" class="text-accent text-[24px] font-bold mb-12 relative z-10">/ Contact</h3>
             <div class="flex flex-col gap-8 relative z-10">
                 <a href="mailto:rob@robertogoux.com" class="group flex items-center gap-6 w-fit">
