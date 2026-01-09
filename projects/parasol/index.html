@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parasol Furniture Gallery | Case Study</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+
+<body class="light-mode">
+
+    <header class="fixed top-6 left-0 w-full px-6 flex justify-between items-center z-50">
+        <a href="../../index.html" class="back-btn-link" style="text-decoration: none;">
+            <div class="back-btn-container">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M19 12H5m7-7l-7 7 7 7" />
+                </svg>
+                <span id="nav-back" class="lang-label-back font-bold">BACK</span>
+            </div>
+        </a>
+
+        <div class="flex gap-3">
+            <button id="theme-toggle" class="control-btn">
+                <svg id="theme-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+            <button class="lang-toggle control-btn flex items-center gap-2">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+                <span class="lang-label font-bold text-xs">ESP</span>
+            </button>
+        </div>
+    </header>
+
+    <main id="main-scroll-container">
+        <section id="start" class="section-page flex flex-col justify-center items-center px-6 text-center">
+            <p class="text-[10px] tracking-[0.3em] uppercase opacity-50 mb-4 font-bold">UX Strategy & Design</p>
+            <h1 id="project-title" class="text-4xl md:text-8xl font-extrabold mb-6 tracking-tighter">Parasol Furniture Gallery</h1>
+            <p id="hero-desc" class="max-w-2xl opacity-80 leading-relaxed text-lg md:text-xl mb-10 font-medium">Informative digital showroom optimized for high visual impact with a low operational budget.</p>
+            <div class="flex flex-col md:flex-row gap-4">
+                <button id="btn-explore" onclick="smoothScroll('#mindset')" class="btn-primary">EXPLORE PROCESS</button>
+                <a id="btn-live" href="#" target="_blank" class="btn-outline">LIVE SITE</a>
+            </div>
+        </section>
+
+        <section id="mindset" class="section-page flex items-center justify-center px-6 py-12">
+            <div class="max-w-[1400px] w-full grid grid-cols-1 lg:grid-cols-4 gap-12">
+                <div class="lg:col-span-1 flex flex-col justify-between py-4">
+                    <div class="space-y-6">
+                        <h2 id="story-title" class="text-xs tracking-[0.2em] opacity-50 font-bold uppercase">/ MINDSET</h2>
+                        <p id="story-desc" class="text-[38px] font-bold tracking-tight">Direct-to-Code design to maximize budget, eliminating prototypes and building directly in the browser.</p>
+                    </div>
+                    <div class="grid grid-cols-1 gap-4 mt-8">
+                        <div class="stats-card p-6 rounded-2xl border border-zinc-300">
+                            <p class="text-3xl font-extrabold text-accent">40%</p>
+                            <p id="stat-faster" class="text-[10px] opacity-50 uppercase tracking-widest font-bold">FASTER DELIVERY</p>
+                        </div>
+                        <div class="stats-card p-6 rounded-2xl border border-zinc-300">
+                            <p class="text-3xl font-extrabold text-accent">0</p>
+                            <p id="stat-figma" class="text-[10px] opacity-50 uppercase tracking-widest font-bold">FIGMA FILES</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-3">
+                    <div class="masonry-grid">
+                        <div class="masonry-item p-8 rounded-3xl bg-card border border-zinc-300">
+                            <div class="flex items-center gap-3 mb-4">
+                                <svg class="text-accent-deep" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                </svg>
+                                <h4 class="text-accent text-[12px] font-extrabold tracking-widest uppercase">Target Audience</h4>
+                            </div>
+                            <p id="m1" class="text-[18px] font-medium leading-relaxed card-text">The client needed a showroom that appealed to <b>senior clients buying summer homes in Los Cabos</b>, Mexico, seeking "beach house" style furniture.</p>
+                        </div>
+                        <div class="masonry-item p-8 rounded-3xl bg-card border border-zinc-300">
+                            <div class="flex items-center gap-3 mb-4">
+                                <svg class="text-accent-deep" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <line x1="12" y1="1" x2="12" y2="23"></line>
+                                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                </svg>
+                                <h4 class="text-accent text-[12px] font-extrabold tracking-widest uppercase">Financial Empathy</h4>
+                            </div>
+                            <p id="m2" class="text-[18px] font-medium leading-relaxed card-text">Moving from employee to entrepreneur, the client had a limited budget. She needed <b>solutions that adapted to her evolving finances</b>.</p>
+                        </div>
+                        <div class="masonry-item p-8 rounded-3xl bg-card border border-zinc-300">
+                            <div class="flex items-center gap-3 mb-4">
+                                <svg class="text-accent-deep" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                                    <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                                </svg>
+                                <h4 class="text-accent text-[12px] font-extrabold tracking-widest uppercase">Iterative Branding</h4>
+                            </div>
+                            <p id="m3" class="text-[18px] font-medium leading-relaxed card-text">We collaborated closely to <b>align her design ideas into branding</b>, style guides, and store tone that matched her vision perfectly.</p>
+                        </div>
+                        <div class="masonry-item p-8 rounded-3xl bg-card border border-zinc-300">
+                            <div class="flex items-center gap-3 mb-4">
+                                <svg class="text-accent-deep" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <polyline points="16 18 22 12 16 6"></polyline>
+                                    <polyline points="8 6 2 12 8 18"></polyline>
+                                </svg>
+                                <h4 class="text-accent text-[12px] font-extrabold tracking-widest uppercase">Production</h4>
+                            </div>
+                            <p id="m4" class="text-[18px] font-medium leading-relaxed card-text">After designing with VS Code, Tailwind, and Photoshop, we moved to the <b>direct content creation phase</b>.</p>
+                        </div>
+                        <div class="masonry-item p-8 rounded-3xl bg-card border border-zinc-300">
+                            <div class="flex items-center gap-3 mb-4">
+                                <svg class="text-accent-deep" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                                </svg>
+                                <h4 class="text-accent text-[12px] font-extrabold tracking-widest uppercase">Work Plan</h4>
+                            </div>
+                            <p id="m5" class="text-[18px] font-medium leading-relaxed card-text">To protect her economy, we set a <b>bi-weekly schedule where I edit and upload 10-15 images</b>, avoiding a single large upfront cost.</p>
+                        </div>
+                        <div class="masonry-item p-8 rounded-3xl bg-card border border-zinc-300">
+                            <div class="flex items-center gap-3 mb-4">
+                                <svg class="text-accent-deep" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                                </svg>
+                                <h4 class="text-accent text-[12px] font-extrabold tracking-widest uppercase">Social Assets</h4>
+                            </div>
+                            <p id="m6" class="text-[18px] font-medium leading-relaxed card-text">Finally, we <b>generated social media assets, analyzed and approved together</b> to maintain consistency.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="section-page flex items-center justify-center">
+            <div class="carousel-main-container relative w-[70vw] aspect-video overflow-hidden rounded-[12px] shadow-2xl bg-zinc-300 border border-zinc-300">
+                <div id="slides-container" class="flex h-full transition-transform duration-700 ease-in-out">
+                    <div class="min-w-full h-full relative">
+                        <img src="./assets/slide-1.png" class="w-full h-full object-cover" alt="Slide 1">
+                        <div class="absolute bottom-6 left-6 text-white text-[10px] font-bold tracking-widest uppercase bg-black/30 backdrop-blur-sm p-2 rounded">DESKTOP</div>
+                    </div>
+                    <div class="min-w-full h-full relative">
+                        <img src="./assets/slide-5.png" class="w-full h-full object-cover" alt="Slide 2">
+                        <div class="absolute bottom-6 left-6 text-white text-[10px] font-bold tracking-widest uppercase bg-black/30 backdrop-blur-sm p-2 rounded">MOBILE / RESPONSIVE</div>
+                    </div>
+                    <div class="min-w-full h-full relative">
+                        <img src="./assets/slide-3.png" class="w-full h-full object-cover" alt="Slide 3">
+                        <div class="absolute bottom-6 left-6 text-white text-[10px] font-bold tracking-widest uppercase bg-black/30 backdrop-blur-sm p-2 rounded">PIXEL PERFECR LAYOUT</div>
+                    </div>
+                    <div class="min-w-full h-full relative">
+                        <img src="./assets/slide-4.png" class="w-full h-full object-cover" alt="Slide 4">
+                        <div class="absolute bottom-6 left-6 text-white text-[10px] font-bold tracking-widest uppercase bg-black/30 backdrop-blur-sm p-2 rounded">WELL KNOWN LAYOUT</div>
+                    </div>
+                </div>
+
+                <button id="carousel-control" class="absolute bottom-6 right-6 p-3 bg-white/20 hover:bg-white/40 backdrop-blur-md rounded-full text-white transition-all z-20">
+                    <svg id="pause-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <rect x="6" y="4" width="4" height="16"></rect>
+                        <rect x="14" y="4" width="4" height="16"></rect>
+                    </svg>
+                    <svg id="play-icon" class="hidden" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <section id="skills" class="section-page flex flex-col justify-center px-6">
+            <div class="max-w-5xl mx-auto w-full">
+                <h2 id="stack-title" class="text-xs tracking-[0.2em] opacity-50 mb-6 font-bold uppercase">/ Software Stack</h2>
+                <div class="stack-banner w-full h-[120px] rounded-3xl mb-12 bg-zinc-200 overflow-hidden relative border border-zinc-300">
+                    <div class="absolute inset-0 flex items-center justify-center opacity-20 font-black text-4xl tracking-tighter italic">TECH ECOSYSTEM</div>
+                </div>
+                <div class="space-y-12">
+                    <div class="software-row flex flex-col gap-2 border-b border-zinc-200 pb-8">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-zinc-100 text-blue-500 font-bold uppercase">Vs</div>
+                            <h3 class="text-[32px] font-extrabold tracking-tight">VS CODE (Tailwind CSS)</h3>
+                        </div>
+                        <p id="desc-vscode" class="text-[20px] leading-relaxed opacity-80 pl-14">Used as the core engine for high-speed development using <b>HTML, CSS, JavaScript, and Tailwind</b>.</p>
+                    </div>
+                    <div class="software-row flex flex-col gap-2 border-b border-zinc-200 pb-8">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-zinc-100 text-blue-600 font-bold uppercase">Ps</div>
+                            <h3 class="text-[32px] font-extrabold tracking-tight">ADOBE PHOTOSHOP</h3>
+                        </div>
+                        <p id="desc-ps" class="text-[20px] leading-relaxed opacity-80 pl-14">Essential for <b>editing and adapting raw product images</b> to fit the showroom aesthetic.</p>
+                    </div>
+                    <div class="software-row flex flex-col gap-2 border-b border-zinc-200 pb-8">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-zinc-100 text-orange-500 font-bold uppercase">Ai</div>
+                            <h3 class="text-[32px] font-extrabold tracking-tight">ADOBE ILLUSTRATOR</h3>
+                        </div>
+                        <p id="desc-ai" class="text-[20px] leading-relaxed opacity-80 pl-14">Dedicated to <b>crafting the brand's logo from scratch</b> and adapting multiple icons.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="footer" class="section-page flex flex-col justify-center items-center px-6 text-center">
+            <h2 id="footer-cta" class="text-3xl md:text-7xl font-extrabold mb-12 tracking-tight">Ready to optimize your business?</h2>
+            <div class="flex gap-4">
+                <a id="btn-contact" href="mailto:tu-email@ejemplo.com" class="btn-primary">GET IN TOUCH</a>
+                <button id="btn-top" onclick="smoothScroll('#start')" class="btn-outline">BACK TO TOP</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
