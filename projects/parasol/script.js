@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // GSAP Plugins
+    // GSAP Plugins (Solo ScrollTo para los botones de navegación)
     gsap.registerPlugin(ScrollToPlugin);
 
     const langToggle = document.querySelector(".lang-toggle");
@@ -99,8 +99,13 @@ document.addEventListener("DOMContentLoaded", () => {
     langToggle.addEventListener("click", updateLanguage);
     themeToggle.addEventListener("click", () => document.body.classList.toggle("dark-mode"));
 
+    // Smooth Scroll para botones
     window.smoothScroll = function (targetId) {
-        gsap.to(window, { duration: 1, scrollTo: targetId, ease: "power2.inOut" });
+        gsap.to(window, {
+            duration: 1,
+            scrollTo: { y: targetId, autoKill: true },
+            ease: "power2.inOut",
+        });
     };
 
     // --- LÓGICA DEL CARRUSEL ---

@@ -25,16 +25,7 @@ body {
     color: var(--main);
     overflow-x: hidden;
     transition: background-color 0.4s ease;
-}
-html {
-    scroll-snap-type: y mandatory;
-}
-.section-page {
-    height: 100vh;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-    position: relative;
-    overflow: hidden;
+    scroll-behavior: auto;
 }
 
 /* HEADER & NAVIGATION */
@@ -91,13 +82,7 @@ html {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
 }
 
-/* GALLERY BANNER - FIXED 70% DOM */
-#gallery {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
+/* GALLERY BANNER */
 .carousel-main-container {
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }

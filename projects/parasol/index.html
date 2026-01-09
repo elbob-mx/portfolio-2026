@@ -10,7 +10,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
 
 <body class="light-mode">
@@ -42,32 +41,32 @@
         </div>
     </header>
 
-    <main id="main-scroll-container">
-        <section id="start" class="section-page flex flex-col justify-center items-center px-6 text-center">
-            <p class="text-[10px] tracking-[0.3em] uppercase opacity-50 mb-4 font-bold">UX Strategy & Design</p>
+    <main>
+        <section id="start" class="section-container flex flex-col justify-center items-center px-6 text-center min-h-screen">
+            <p class="text-[12px] tracking-[0.3em] uppercase opacity-60 mb-4 font-bold">Strategy & Design</p>
             <h1 id="project-title" class="text-4xl md:text-8xl font-extrabold mb-6 tracking-tighter">Parasol Furniture Gallery</h1>
             <p id="hero-desc" class="max-w-2xl opacity-80 leading-relaxed text-lg md:text-xl mb-10 font-medium">Informative digital showroom optimized for high visual impact with a low operational budget.</p>
             <div class="flex flex-col md:flex-row gap-4">
                 <button id="btn-explore" onclick="smoothScroll('#mindset')" class="btn-primary">EXPLORE PROCESS</button>
-                <a id="btn-live" href="#" target="_blank" class="btn-outline">LIVE SITE</a>
+                <a id="btn-live" href="https://parasolgalleryfurniture.com/" target="_blank" class="btn-outline">LIVE SITE</a>
             </div>
         </section>
 
-        <section id="mindset" class="section-page flex items-center justify-center px-6 py-12">
+        <section id="mindset" class="section-container flex items-center justify-center px-6 py-24">
             <div class="max-w-[1400px] w-full grid grid-cols-1 lg:grid-cols-4 gap-12">
                 <div class="lg:col-span-1 flex flex-col justify-between py-4">
                     <div class="space-y-6">
-                        <h2 id="story-title" class="text-xs tracking-[0.2em] opacity-50 font-bold uppercase">/ MINDSET</h2>
+                        <h2 id="story-title" class="text-xs tracking-[0.2em] opacity-50 font-bold uppercase">/ IDEATION - DESIGN - DELIVERY</h2>
                         <p id="story-desc" class="text-[38px] font-bold tracking-tight">Direct-to-Code design to maximize budget, eliminating prototypes and building directly in the browser.</p>
                     </div>
                     <div class="grid grid-cols-1 gap-4 mt-8">
                         <div class="stats-card p-6 rounded-2xl border border-zinc-300">
-                            <p class="text-3xl font-extrabold text-accent">40%</p>
-                            <p id="stat-faster" class="text-[10px] opacity-50 uppercase tracking-widest font-bold">FASTER DELIVERY</p>
+                            <p class="text-3xl font-extrabold text-accent">1</p>
+                            <p id="stat-faster" class="text-[10px] opacity-50 uppercase tracking-widest font-bold">CUSTOM DESIGNED SITE</p>
                         </div>
                         <div class="stats-card p-6 rounded-2xl border border-zinc-300">
-                            <p class="text-3xl font-extrabold text-accent">0</p>
-                            <p id="stat-figma" class="text-[10px] opacity-50 uppercase tracking-widest font-bold">FIGMA FILES</p>
+                            <p class="text-3xl font-extrabold text-accent">1</p>
+                            <p id="stat-figma" class="text-[10px] opacity-50 uppercase tracking-widest font-bold">MONTH TO FINISH</p>
                         </div>
                     </div>
                 </div>
@@ -139,24 +138,24 @@
             </div>
         </section>
 
-        <section id="gallery" class="section-page flex items-center justify-center">
+        <section id="gallery" class="flex items-center justify-center py-24 h-full">
             <div class="carousel-main-container relative w-[70vw] aspect-video overflow-hidden rounded-[12px] shadow-2xl bg-zinc-300 border border-zinc-300">
                 <div id="slides-container" class="flex h-full transition-transform duration-700 ease-in-out">
                     <div class="min-w-full h-full relative">
                         <img src="./assets/slide-1.png" class="w-full h-full object-cover" alt="Slide 1">
-                        <div class="absolute bottom-6 left-6 text-white text-[10px] font-bold tracking-widest uppercase bg-black/30 backdrop-blur-sm p-2 rounded">DESKTOP</div>
+                        <div class="absolute bottom-6 left-6 text-white text-[10px] font-bold tracking-widest uppercase bg-black/30 backdrop-blur-sm p-2 rounded"> DESKTOP</div>
                     </div>
                     <div class="min-w-full h-full relative">
                         <img src="./assets/slide-5.png" class="w-full h-full object-cover" alt="Slide 2">
-                        <div class="absolute bottom-6 left-6 text-white text-[10px] font-bold tracking-widest uppercase bg-black/30 backdrop-blur-sm p-2 rounded">MOBILE / RESPONSIVE</div>
+                        <div class="absolute bottom-6 left-6 text-white text-[10px] font-bold tracking-widest uppercase bg-black/30 backdrop-blur-sm p-2 rounded">MOBILE / Responsive Design</div>
                     </div>
                     <div class="min-w-full h-full relative">
                         <img src="./assets/slide-3.png" class="w-full h-full object-cover" alt="Slide 3">
-                        <div class="absolute bottom-6 left-6 text-white text-[10px] font-bold tracking-widest uppercase bg-black/30 backdrop-blur-sm p-2 rounded">PIXEL PERFECR LAYOUT</div>
+                        <div class="absolute bottom-6 left-6 text-white text-[10px] font-bold tracking-widest uppercase bg-black/30 backdrop-blur-sm p-2 rounded">PIXEL PERFECT DESIGN</div>
                     </div>
                     <div class="min-w-full h-full relative">
                         <img src="./assets/slide-4.png" class="w-full h-full object-cover" alt="Slide 4">
-                        <div class="absolute bottom-6 left-6 text-white text-[10px] font-bold tracking-widest uppercase bg-black/30 backdrop-blur-sm p-2 rounded">WELL KNOWN LAYOUT</div>
+                        <div class="absolute bottom-6 left-6 text-white text-[10px] font-bold tracking-widest uppercase bg-black/30 backdrop-blur-sm p-2 rounded">FAMILIAR LAYOUT</div>
                     </div>
                 </div>
 
@@ -172,12 +171,10 @@
             </div>
         </section>
 
-        <section id="skills" class="section-page flex flex-col justify-center px-6">
+        <section id="skills" class="flex flex-col justify-center px-6 py-24 h-full">
             <div class="max-w-5xl mx-auto w-full">
-                <h2 id="stack-title" class="text-xs tracking-[0.2em] opacity-50 mb-6 font-bold uppercase">/ Software Stack</h2>
-                <div class="stack-banner w-full h-[120px] rounded-3xl mb-12 bg-zinc-200 overflow-hidden relative border border-zinc-300">
-                    <div class="absolute inset-0 flex items-center justify-center opacity-20 font-black text-4xl tracking-tighter italic">TECH ECOSYSTEM</div>
-                </div>
+                <h2 id="stack-title" class="text-xs tracking-[0.2em] opacity-50 mb-6 font-bold uppercase">/ Software Used</h2>
+
                 <div class="space-y-12">
                     <div class="software-row flex flex-col gap-2 border-b border-zinc-200 pb-8">
                         <div class="flex items-center gap-4">
@@ -204,10 +201,10 @@
             </div>
         </section>
 
-        <section id="footer" class="section-page flex flex-col justify-center items-center px-6 text-center">
+        <section id="footer" class="flex flex-col justify-center items-center px-6 text-center py-32 h-screen">
             <h2 id="footer-cta" class="text-3xl md:text-7xl font-extrabold mb-12 tracking-tight">Ready to optimize your business?</h2>
             <div class="flex gap-4">
-                <a id="btn-contact" href="mailto:tu-email@ejemplo.com" class="btn-primary">GET IN TOUCH</a>
+                <a id="btn-contact" href="mailto:rob@robertogoux.com" class="btn-primary">SEND MAIL</a>
                 <button id="btn-top" onclick="smoothScroll('#start')" class="btn-outline">BACK TO TOP</button>
             </div>
         </section>
