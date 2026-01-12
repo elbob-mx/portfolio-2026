@@ -12,6 +12,7 @@
     <link rel="manifest" href="./assets/favicon/site.webmanifest" />
     <title>Roberto Gutiérrez O. | UX/UI Designer</title>
     <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9846627988.js" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -222,10 +223,12 @@
                     </svg>
                     <span class="text-[24px] md:text-[32px] group-hover:text-accent transition-colors">LinkedIn</span>
                 </a>
-                <a href="#" target="_blank" class="group flex items-center gap-6 w-fit">
-
-                    <span class="text-[24px] md:text-[32px] group-hover:text-accent transition-colors hidden">Behance</span>
-                </a>
+                <div class="hidden">
+                    <a href="#" target="_blank" class="group flex items-center gap-6 w-fit">
+                        <i class="fa-brands fa-behance text-accent text-[24px] md:text-[32px]"></i>
+                        <span class="text-[24px] md:text-[32px] group-hover:text-accent transition-colors">Behance</span>
+                    </a>
+                </div>
             </div>
         </section>
     </main>
