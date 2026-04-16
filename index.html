@@ -48,7 +48,6 @@
     <nav class="hidden lg:flex fixed right-0 top-0 h-full w-[120px] border-l border-warm-grey z-50 bg-bg-main flex-col items-center justify-center">
         <div class="flex flex-col gap-12 items-center">
             <a href="#hero" class="nav-link tracking-widest uppercase text-[12px] nav-text-start">START</a>
-            <a href="#about" class="nav-link tracking-widest uppercase text-[12px] nav-text-story">MINDSET</a>
             <a href="#skills" class="nav-link tracking-widest uppercase text-[12px] nav-text-stack">STACK</a>
             <a href="#work" class="nav-link tracking-widest uppercase text-[12px] nav-text-work">WORK</a>
             <a href="#contact" class="nav-link tracking-widest uppercase text-[12px] nav-text-contact">CONTACT</a>
@@ -62,13 +61,6 @@
                 <polyline points="9 22 9 12 15 12 15 22" />
             </svg>
             <span class="text-[10px] font-bold uppercase nav-text-start">START</span>
-        </a>
-        <a href="#about" class="mobile-nav-item flex-1 flex flex-col items-center justify-center gap-1 h-full">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
-                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
-            </svg>
-            <span class="text-[10px] font-bold uppercase nav-text-story">STORY</span>
         </a>
         <a href="#skills" class="mobile-nav-item flex-1 flex flex-col items-center justify-center gap-1 h-full">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -97,14 +89,10 @@
         <section id="hero" class="min-h-screen flex flex-col justify-center px-8 md:px-24">
             <img src="./assets/logo/logo-rrgo-mint.png" alt="rrgo ux/ui logo" class="md:w-[72px] w-[64px] mb-6 md:mb-8">
             <h1 class="text-[34px] md:text-[72px] font-bold leading-tight">Roberto <span class="text-accent">Gutiérrez O.</span></h1>
-
-            <p id="role" class="text-[16px] md:text-[20px] opacity-50 max-w-3xl mb-8 leading-loose">I make UX/UI design (among others 😎)</p>
-            <p id="hero-desc" class="text-[18px] md:text-[24px] max-w-3xl opacity-80 mt-6 leading-loose">With 15+ years of experience, I’ve learned that design transcends aesthetics; it is the <span class="text-accent">strategic bridge between business goals and user needs</span>. My focus is creating products that drive results while making the user feel understood and empowered. <span class="text-accent">Thanks for being here 😁.</span></p>
-        </section>
-
-        <section id="about" class="min-h-screen flex flex-col justify-center px-8 md:px-24">
-            <h3 id="story-title" class="text-accent text-[40px] font-bold mb-6">/ Mindset</h3>
-            <p id="story-desc" class="text-[18px] md:text-[24px] max-w-3xl leading-loose">I believe that great design is the result of deep understanding. I transform complex challenges into intuitive experiences by <span class='text-accent'>aligning user needs with business goals,</span> using data as a compass and empathy as a tool to create solutions that feel second nature.</p>
+            <p id="role" class="text-[16px] md:text-[32px] opacity-100 max-w-3xl mb-8 leading-loose text-accent">I make UX/UI design.</p>
+            <p id="hero-desc-1" class="text-[16px] md:text-[24px] max-w-3xl leading-loose">I believe that <span class="text-accent">building user trust by addressing real needs is the most powerful bridge to achieving business goals.</span></p>
+            <p id="hero-desc-2" class="text-[16px] md:text-[24px] max-w-3xl mt-6 leading-loose">I specialize in transforming operational complexity into seamless, accessible experiences.</p>
+            <p id="hero-desc-3" class="text-[16px] md:text-[24px] max-w-3xl mt-6 leading-loose">By leveraging usability and scalable design systems, I drive financial growth and efficiency while ensuring that every interaction strengthens the user's confidence and sense of empowerment.</p>
         </section>
 
         <section id="skills" class="min-h-screen flex flex-col justify-center px-8 md:px-24">
@@ -119,86 +107,69 @@
 
             <h3 id="soft-skills-title" class="text-accent text-[24px] font-bold mt-12 mb-6">/ Soft Skills</h3>
             <div class="space-y-6 max-w-4xl">
-                <div class="software-row flex justify-between border-b border-white/10 pb-4"><span class="text-[20px]">User-Centered Design</span><span class="text-accent text-[12px] uppercase font-bold tracking-widest self-end skill-label">Experienced</span></div>
-                <div class="software-row flex justify-between border-b border-white/10 pb-4"><span class="text-[20px]">WCAG/APCA Accessibility</span><span class="text-accent text-[12px] uppercase font-bold tracking-widest self-end skill-label">Proficient</span></div>
-                <div class="software-row flex justify-between border-b border-white/10 pb-4"><span class="text-[20px]">Client Communication</span><span class="text-accent text-[12px] uppercase font-bold tracking-widest self-end skill-label">Proficient</span></div>
-                <div class="software-row flex justify-between border-b border-white/10 pb-4"><span class="text-[20px]">Project Coordination</span><span class="text-accent text-[12px] uppercase font-bold tracking-widest self-end skill-label">Proficient</span></div>
+                <div class="software-row flex justify-between border-b border-white/10 pb-4"><span id="skill-ucd" class="text-[20px]">User-Centered Design</span><span class="text-accent text-[12px] uppercase font-bold tracking-widest self-end skill-label">Experienced</span></div>
+                <div class="software-row flex justify-between border-b border-white/10 pb-4"><span id="skill-acc" class="text-[20px]">WCAG/APCA Accessibility</span><span class="text-accent text-[12px] uppercase font-bold tracking-widest self-end skill-label">Proficient</span></div>
+                <div class="software-row flex justify-between border-b border-white/10 pb-4"><span id="skill-comm" class="text-[20px]">Client Communication</span><span class="text-accent text-[12px] uppercase font-bold tracking-widest self-end skill-label">Proficient</span></div>
+                <div class="software-row flex justify-between border-b border-white/10 pb-4"><span id="skill-coord" class="text-[20px]">Project Coordination</span><span class="text-accent text-[12px] uppercase font-bold tracking-widest self-end skill-label">Proficient</span></div>
             </div>
         </section>
 
         <section id="work" class="min-h-screen flex flex-col justify-center px-8 md:px-24 py-20">
             <h3 id="work-title" class="text-accent md:text-[40px] text-[24px] font-bold mb-6">/ I've been working on:</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-
                 <div class="project-card border border-white/10 rounded-2xl overflow-hidden bg-warm-grey/10 group h-fit">
-                    <div class="aspect-video relative overflow-hidden">
-                        <img src="./assets/project-covers/yt-redesign-cover.png" alt="YouTube Redesign" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                    </div>
+                    <div class="aspect-video relative overflow-hidden"><img src="./assets/project-covers/yt-redesign-cover.png" alt="YouTube Redesign" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"></div>
                     <div class="p-8">
                         <h4 class="text-[20px] font-bold uppercase tracking-wider mb-4">YouTube Music Redesign</h4>
-                        <div class="project-info-container">
-                            <p id="yt-desc" class="text-[15px] opacity-70 mb-6">Based on detected frictions, I designed new features to simplify constant tasks.</p>
-                            <div class="space-y-4 mb-8">
-                                <div class="border-l-2 border-accent pl-4">
-                                    <p class="prob-label text-[12px] text-accent uppercase font-bold mb-1">// Detected Problems</p>
-                                    <p id="yt-prob" class="text-[14px] opacity-80">Difficulty navigating extensive playlists, save content on multiple playlists and visual noise.</p>
-                                </div>
-                                <div class="border-l-2 border-accent pl-4">
-                                    <p class="res-label text-[12px] text-accent uppercase font-bold mb-1">// Obtained Results</p>
-                                    <p id="yt-res" class="text-[14px] opacity-80">Reduction in clicks to save content, create playlists and an overall better hierarchization.</p>
-                                </div>
+                        <p id="yt-desc" class="text-[15px] opacity-70 mb-6">Based on detected frictions, I designed new features to simplify constant tasks.</p>
+                        <div class="space-y-4 mb-8">
+                            <div class="border-l-2 border-accent pl-4">
+                                <p class="prob-label text-[12px] text-accent uppercase font-bold mb-1">// Detected Problems</p>
+                                <p id="yt-prob" class="text-[14px] opacity-80">Difficulty navigating extensive playlists...</p>
                             </div>
-                            <a id="btn-view-yt" href="projects/yt-music/index.html" class="inline-block px-8 py-3 border border-accent text-accent rounded-full text-[13px] font-bold hover:bg-accent hover:text-bg-main transition-all uppercase tracking-widest btn-text-view">View Project</a>
+                            <div class="border-l-2 border-accent pl-4">
+                                <p class="res-label text-[12px] text-accent uppercase font-bold mb-1">// Obtained Results</p>
+                                <p id="yt-res" class="text-[14px] opacity-80">Reduction in clicks...</p>
+                            </div>
                         </div>
+                        <a href="projects/yt-music/index.html" class="inline-block px-8 py-3 border border-accent text-accent rounded-full text-[13px] font-bold hover:bg-accent hover:text-bg-main transition-all uppercase tracking-widest btn-text-view">View Project</a>
                     </div>
                 </div>
 
                 <div class="project-card border border-white/10 rounded-2xl overflow-hidden bg-warm-grey/10 group h-fit">
-                    <div class="aspect-video relative overflow-hidden">
-                        <img src="./assets/project-covers/hra-cover.png" alt="Parasol" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                    </div>
+                    <div class="aspect-video relative overflow-hidden"><img src="./assets/project-covers/hra-cover.png" alt="HRA" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"></div>
                     <div class="p-8">
                         <h4 class="text-[20px] font-bold uppercase tracking-wider mb-4">HRA Senior Living</h4>
-                        <div class="project-info-container">
-                            <p id="ps-desc" class="text-[15px] opacity-70 mb-6">Redesigning for the Silver Economy requires a balance between premium aesthetics and extreme usability. I focused on reducing "search fatigue" by implementing a predictive discovery engine. <br><br> Users see communities, care types, and locations in real-time.</p>
-                            <a id="btn-view-ps" href="./projects/harbor-retirement-associates/index.html" target="_blank" class="inline-block px-8 py-3 border border-accent text-accent rounded-full text-[13px] font-bold hover:bg-accent hover:text-bg-main transition-all uppercase tracking-widest btn-text-view">View Project</a>
-                        </div>
+                        <p id="hra-desc" class="text-[15px] opacity-70 mb-6">Redesigning for the Silver Economy requires a balance between premium aesthetics and extreme usability.</p>
+                        <a href="./projects/harbor-retirement-associates/index.html" target="_blank" class="inline-block px-8 py-3 border border-accent text-accent rounded-full text-[13px] font-bold hover:bg-accent hover:text-bg-main transition-all uppercase tracking-widest btn-text-view">View Project</a>
                     </div>
                 </div>
 
                 <div class="project-card border border-white/10 rounded-2xl overflow-hidden bg-warm-grey/10 group h-fit">
-                    <div class="aspect-video relative overflow-hidden">
-                        <img src="./assets/project-covers/misaldo-project-cover.png" alt="Mi Saldo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                    </div>
+                    <div class="aspect-video relative overflow-hidden"><img src="./assets/project-covers/misaldo-project-cover.png" alt="Mi Saldo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"></div>
                     <div class="p-8">
                         <h4 class="text-[20px] font-bold uppercase tracking-wider mb-4">Mi Saldo App Redesign</h4>
-                        <div class="project-info-container">
-                            <p id="ms-desc" class="text-[15px] opacity-70 mb-6">Optimization of the NFC transactional flow to reduce user errors and improve readability in high mobility environments.</p>
-                            <div class="space-y-4 mb-8">
-                                <div class="border-l-2 border-accent pl-4">
-                                    <p class="prob-label text-[12px] text-accent uppercase font-bold mb-1">// Detected Problems</p>
-                                    <p id="ms-prob" class="text-[14px] opacity-80">Ambiguous recharge flows and lack of visual distinction between account balance and physical card credit.</p>
-                                </div>
-                                <div class="border-l-2 border-accent pl-4">
-                                    <p class="res-label text-[12px] text-accent uppercase font-bold mb-1">// Obtained Results</p>
-                                    <p id="ms-res" class="text-[14px] opacity-80">Implementation of a streamlined 3-step recharge flow with immediate NFC haptic/visual feedback.</p>
-                                </div>
+                        <p id="ms-desc" class="text-[15px] opacity-70 mb-6">Optimization of the NFC transactional flow.</p>
+                        <div class="space-y-4 mb-8">
+                            <div class="border-l-2 border-accent pl-4">
+                                <p class="prob-label text-[12px] text-accent uppercase font-bold mb-1">// Detected Problems</p>
+                                <p id="ms-prob" class="text-[14px] opacity-80">Ambiguous recharge flows...</p>
                             </div>
-                            <a id="btn-view-ms" href="projects/mi-saldo/index.html" class="inline-block px-8 py-3 border border-accent text-accent rounded-full text-[13px] font-bold hover:bg-accent hover:text-bg-main transition-all uppercase tracking-widest btn-text-view">View Project</a>
+                            <div class="border-l-2 border-accent pl-4">
+                                <p class="res-label text-[12px] text-accent uppercase font-bold mb-1">// Obtained Results</p>
+                                <p id="ms-res" class="text-[14px] opacity-80">Implementation of a 3-step recharge...</p>
+                            </div>
                         </div>
+                        <a href="projects/mi-saldo/index.html" class="inline-block px-8 py-3 border border-accent text-accent rounded-full text-[13px] font-bold hover:bg-accent hover:text-bg-main transition-all uppercase tracking-widest btn-text-view">View Project</a>
                     </div>
                 </div>
 
                 <div class="project-card border border-white/10 rounded-2xl overflow-hidden bg-warm-grey/10 group h-fit">
-                    <div class="aspect-video relative overflow-hidden">
-                        <img src="./assets/project-covers/parasol-project-cover.png" alt="Parasol" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                    </div>
+                    <div class="aspect-video relative overflow-hidden"><img src="./assets/project-covers/parasol-project-cover.png" alt="Parasol" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"></div>
                     <div class="p-8">
                         <h4 class="text-[20px] font-bold uppercase tracking-wider mb-4">Parasol Furniture Gallery</h4>
-                        <div class="project-info-container">
-                            <p id="ps-desc" class="text-[15px] opacity-70 mb-6">The client needed a showroom that appealed to senior clients buying summer homes in Los Cabos, Mexico, seeking 'beach house' style furniture. To protect her economy, we set a bi-weekly schedule where I edit and upload 10-15 images, avoiding a single large upfront cost.</p>
-                            <a id="btn-view-ps" href="./projects/parasol/index.html" target="_blank" class="inline-block px-8 py-3 border border-accent text-accent rounded-full text-[13px] font-bold hover:bg-accent hover:text-bg-main transition-all uppercase tracking-widest btn-text-view">View Project</a>
-                        </div>
+                        <p id="ps-desc" class="text-[15px] opacity-70 mb-6">Showroom that appealed to senior clients buying summer homes in Los Cabos.</p>
+                        <a href="./projects/parasol/index.html" target="_blank" class="inline-block px-8 py-3 border border-accent text-accent rounded-full text-[13px] font-bold hover:bg-accent hover:text-bg-main transition-all uppercase tracking-widest btn-text-view">View Project</a>
                     </div>
                 </div>
             </div>
@@ -223,12 +194,6 @@
                     </svg>
                     <span class="text-[24px] md:text-[32px] group-hover:text-accent transition-colors">LinkedIn</span>
                 </a>
-                <div class="">
-                    <a href="https://www.behance.net/robertogoux" target="_blank" class="group flex items-center gap-6 w-fit">
-                        <i class="fa-brands fa-behance text-accent text-[24px] md:text-[32px]"></i>
-                        <span class="text-[24px] md:text-[32px] group-hover:text-accent transition-colors">Behance</span>
-                    </a>
-                </div>
             </div>
         </section>
     </main>
