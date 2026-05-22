@@ -51,14 +51,14 @@
 <body class="min-h-screen antialiased selection:bg-[#FF6A13] selection:text-white overflow-x-hidden">
 
     <div class="fixed top-6 left-6 z-50">
-        <a href="https://robertogoux.com/" class="bg-black/40 backdrop-blur-md border border-white/20 hover:border-[#FF6A13] text-white px-4 py-2 rounded-full font-bold text-xs tracking-wider uppercase transition-all duration-300 shadow-lg flex items-center space-x-2">
+        <a href="../../index.html" class="bg-black/40 backdrop-blur-md border border-white/20 hover:border-[#FF6A13] text-white px-4 py-2 rounded-full font-bold text-xs tracking-wider uppercase transition-all duration-300 shadow-lg flex items-center space-x-2">
             <span>←</span>
             <span data-es="VOLVER" data-en="BACK">VOLVER</span>
         </a>
     </div>
 
-    <div class="fixed top-6 right-6 z-50">
-        <button id="lang-toggle" class="bg-black/40 backdrop-blur-md border border-white/20 hover:border-[#FF6A13] text-white px-4 py-2 rounded-full font-bold text-xs tracking-wider uppercase transition-all duration-300 cursor-pointer shadow-lg flex items-center space-x-2">
+    <div class="fixed top-6 right-4 z-[100] md:right-6">
+        <button id="lang-toggle" class="bg-black/40 backdrop-blur-md border border-white/20 hover:border-[#FF6A13] text-white px-3 py-2 rounded-full font-bold text-[10px] uppercase transition-all duration-300 shadow-xl flex items-center justify-center min-w-[40px]">
             <span id="lang-label">EN</span>
         </button>
     </div>
@@ -93,24 +93,16 @@
         </header>
 
         <section id="hero-banner" class="opacity-0 scale-95 space-y-4">
-            <div class="relative bg-gradient-to-br from-[#6b2461] to-[#4a1542] rounded-2xl border border-white/10 overflow-hidden shadow-2xl group transition-all duration-500 hover:border-white/20">
+            <div class="relative bg-gradient-to-br from-[#6b2461] to-[#4a1542] rounded-2xl border border-white/10 overflow-hidden shadow-2xl group transition-all duration-500">
 
-                <div class="bg-black/20 px-6 py-4 border-b border-white/5 flex items-center justify-between text-sm text-muted-custom">
-                    <div class="flex items-center space-x-2">
-                        <div class="w-2.5 h-2.5 rounded-full bg-white/20"></div>
-                        <span class="font-bold tracking-wider">LIVERPOOL MARKETPLACE</span>
-                    </div>
-                    <span class="bg-[#FF6A13]/20 text-[#FF6A13] font-bold px-2.5 py-0.5 rounded text-xs tracking-wide">REDESIGN</span>
+                <div class="aspect-[16/9] md:aspect-video w-full bg-black/10 overflow-hidden">
+                    <img src="assets/dashboard-redesign.png" alt="Liverpool Dashboard Redesign" class="w-full h-full object-cover">
                 </div>
 
-                <div class="aspect-[16/9] w-full bg-black/10 relative flex items-center justify-center overflow-hidden">
-                    <img src="assets/dashboard-redesign.png" alt="Liverpool Dashboard Redesign" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.01]">
-
-                    <div class="absolute bottom-6 left-6 right-6 bg-[#181818]/85 backdrop-blur-md p-6 rounded-xl border border-white/10 max-w-4xl space-y-2">
-                        <span class="text-xs font-bold uppercase tracking-widest text-[#FF6A13]" data-es="Solución Estratégica de Producto" data-en="Strategic Product Solution">Solución Estratégica de Producto</span>
-                        <h3 class="text-xl md:text-2xl font-black text-white" data-es="Carga Inteligente Asistida: Publicación Completa en una Sola Pantalla" data-en="Smart Assisted Upload: Complete Publishing on a Single Screen">Carga Inteligente Asistida: Publicación Completa en una Sola Pantalla</h3>
-                        <p class="text-sm text-readable hidden md:block leading-relaxed" data-es="Al procesar el identificador único (EAN), el sistema automatiza la recuperación de metadata técnica y recursos visuales. El flujo se reduce de un laberinto de más de 4 pantallas a un único espacio de validación humana." data-en="By processing the unique identifier (EAN), the system automates technical metadata and visual asset retrieval. The flow is compressed from a labyrinth of 4+ screens into a single human validation space.">Al procesar el identificador único (EAN), el sistema automatiza la recuperación de metadata técnica y recursos visuales. El flujo se reduce de un laberinto de más de 4 pantallas a un único espacio de validación humana.</p>
-                    </div>
+                <div class="p-6 md:absolute md:bottom-6 md:left-6 md:right-6 md:bg-[#181818]/85 md:backdrop-blur-md md:p-6 md:rounded-xl md:border md:border-white/10 max-w-4xl space-y-2">
+                    <span class="text-[10px] md:text-xs font-bold uppercase tracking-widest text-[#FF6A13]" data-es="Solución Estratégica de Producto" data-en="Strategic Product Solution">Solución Estratégica de Producto</span>
+                    <h3 class="text-xl md:text-2xl font-black text-white leading-tight" data-es="Carga Inteligente Asistida: Publicación Completa en una Sola Pantalla" data-en="Smart Assisted Upload: Complete Publishing on a Single Screen">Carga Inteligente Asistida: Publicación Completa en una Sola Pantalla</h3>
+                    <p class="text-sm text-readable leading-relaxed" data-es="Al procesar el identificador único (EAN), el sistema automatiza la recuperación de metadata técnica y recursos visuales. El flujo se reduce de un laberinto de más de 4 pantallas a un único espacio de validación humana." data-en="By processing the unique identifier (EAN), the system automates technical metadata and visual asset retrieval. The flow is compressed from a labyrinth of 4+ screens into a single human validation space.">Al procesar el identificador único (EAN), el sistema automatiza la recuperación de metadata técnica y recursos visuales. El flujo se reduce de un laberinto de más de 4 pantallas a un único espacio de validación humana.</p>
                 </div>
             </div>
         </section>
@@ -252,26 +244,29 @@
                 <span class="text-sm font-bold uppercase text-[#FF6A13] tracking-widest" data-es="Antes vs Después" data-en="Before vs After">Antes vs Después</span>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
                 <div class="bg-black/20 border border-white/5 p-6 rounded-xl text-center space-y-2">
-                    <span class="text-xs font-bold uppercase tracking-wider text-muted-custom" data-es="TIEMPO DE CARGA" data-en="UPLOAD TIME">TIEMPO DE CARGA</span>
-                    <div class="text-4xl font-black text-[#FF6A13] tracking-tight">&lt; 45s</div>
-                    <span class="text-xs block text-readable font-medium" data-es="Antes: 5 - 12 min por SKU" data-en="Before: 5 - 12 min per SKU">Antes: 5 - 12 min por SKU</span>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-muted-custom" data-es="TIEMPO DE CARGA" data-en="UPLOAD TIME">TIEMPO DE CARGA</span>
+                    <div class="text-3xl font-black text-[#FF6A13] tracking-tight">&lt; 45s</div>
+                    <span class="text-[10px] block text-readable font-medium" data-es="Antes: 5 - 12 min por SKU" data-en="Before: 5 - 12 min per SKU">Antes: 5 - 12 min por SKU</span>
                 </div>
+
                 <div class="bg-black/20 border border-white/5 p-6 rounded-xl text-center space-y-2">
-                    <span class="text-xs font-bold uppercase tracking-wider text-muted-custom">TIME-TO-MARKET</span>
-                    <div class="text-4xl font-black text-white tracking-tight" data-es="Instantáneo" data-en="Instantaneous">Instantáneo</div>
-                    <span class="text-xs block text-readable font-medium" data-es="Antes: Espera de semanas" data-en="Before: Weeks of waiting">Antes: Espera de semanas</span>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-muted-custom">TIME-TO-MARKET</span>
+                    <div class="text-3xl font-black text-white tracking-tight" data-es="Instantáneo" data-en="Instantaneous">Instantáneo</div>
+                    <span class="text-[10px] block text-readable font-medium" data-es="Antes: Espera de semanas" data-en="Before: Weeks of waiting">Antes: Espera de semanas</span>
                 </div>
+
                 <div class="bg-black/20 border border-white/5 p-6 rounded-xl text-center space-y-2">
-                    <span class="text-xs font-bold uppercase tracking-wider text-muted-custom" data-es="TASA DE ERROR" data-en="ERROR RATE">TASA DE ERROR</span>
-                    <div class="text-4xl font-black text-[#FF6A13] tracking-tight" data-es="Mínima" data-en="Minimal">Mínima</div>
-                    <span class="text-xs block text-readable font-medium" data-es="Validación en tiempo real" data-en="Real-time validation">Validación en tiempo real</span>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-muted-custom" data-es="TASA DE ERROR" data-en="ERROR RATE">TASA DE ERROR</span>
+                    <div class="text-3xl font-black text-[#FF6A13] tracking-tight" data-es="Mínima" data-en="Minimal">Mínima</div>
+                    <span class="text-[10px] block text-readable font-medium" data-es="Validación en tiempo real" data-en="Real-time validation">Validación en tiempo real</span>
                 </div>
+
                 <div class="bg-black/20 border border-white/5 p-6 rounded-xl text-center space-y-2">
-                    <span class="text-xs font-bold uppercase tracking-wider text-muted-custom" data-es="TAREAS ADMTVAS." data-en="ADMIN TASKS">TAREAS ADMTVAS.</span>
-                    <div class="text-4xl font-black text-white tracking-tight">&lt; 20%</div>
-                    <span class="text-xs block text-readable font-medium" data-es="Antes: ocupaban el 70%" data-en="Before: occupied 70%">Antes: ocupaban el 70%</span>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-muted-custom" data-es="TAREAS ADMTVAS." data-en="ADMIN TASKS">TAREAS ADMTVAS.</span>
+                    <div class="text-3xl font-black text-white tracking-tight">&lt; 20%</div>
+                    <span class="text-[10px] block text-readable font-medium" data-es="Antes: ocupaban el 70%" data-en="Before: occupied 70%">Antes: ocupaban el 70%</span>
                 </div>
             </div>
         </section>
