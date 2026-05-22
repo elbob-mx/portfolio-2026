@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liverpool Marketplace Case Study | Roberto Gutiérrez O.</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Archivo', sans-serif;
+            background-color: #833177;
+            color: #f2f2f2;
+        }
+
+        .text-readable {
+            color: rgba(242, 242, 242, 0.9);
+        }
+
+        .text-muted-custom {
+            color: rgba(242, 242, 242, 0.6);
+        }
+
+        .zoom-wrapper {
+            touch-action: none;
+            user-select: none;
+        }
+
+        /* Estilo para los botones de figma y sociales */
+        .btn-outline {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline:hover {
+            border-color: #FF6A13;
+            background: rgba(255, 106, 19, 0.1);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen antialiased selection:bg-[#FF6A13] selection:text-white overflow-x-hidden">
+
+    <div class="fixed top-6 left-6 z-50">
+        <a href="https://robertogoux.com/" class="bg-black/40 backdrop-blur-md border border-white/20 hover:border-[#FF6A13] text-white px-4 py-2 rounded-full font-bold text-xs tracking-wider uppercase transition-all duration-300 shadow-lg flex items-center space-x-2">
+            <span>←</span>
+            <span data-es="VOLVER" data-en="BACK">VOLVER</span>
+        </a>
+    </div>
+
+    <div class="fixed top-6 right-6 z-50">
+        <button id="lang-toggle" class="bg-black/40 backdrop-blur-md border border-white/20 hover:border-[#FF6A13] text-white px-4 py-2 rounded-full font-bold text-xs tracking-wider uppercase transition-all duration-300 cursor-pointer shadow-lg flex items-center space-x-2">
+            <span id="lang-label">EN</span>
+        </button>
+    </div>
+
+    <div class="max-w-[1320px] mx-auto px-6 py-12 md:py-20 space-y-28">
+
+        <header id="header-section" class="opacity-0 translate-y-6 space-y-8">
+            <div class="space-y-4">
+                <span class="text-sm font-bold uppercase tracking-widest text-[#FF6A13]">CASE STUDY: ENTERPRISE UX & PRODUCT LOGIC</span>
+                <h1 class="text-4xl md:text-5xl lg:text-7xl font-black tracking-tighter text-[#f2f2f2] leading-none">
+                    <span data-es="Optimización del Seller en Liverpool Marketplace" data-en="Seller Experience Optimization at Liverpool Marketplace">Optimización del Seller en Liverpool Marketplace</span>
+                </h1>
+                <p class="text-xl md:text-2xl font-light text-readable max-w-5xl leading-relaxed">
+                    <span data-es="Rediseño del flujo de catalogación masiva y manual mediante Carga Inteligente Asistida para eliminar el re-trabajo operativo y reducir el Time-to-Market de semanas a segundos." data-en="Redesigning manual cataloging flows through Smart Assisted Upload to eliminate operational rework and reduce Time-to-Market from weeks to seconds.">Rediseño del flujo de catalogación manual mediante Carga Inteligente Asistida para eliminar el re-trabajo operativo y reducir el Time-to-Market.</span>
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 pt-8 border-t border-white/10">
+                <div class="space-y-1">
+                    <span class="block text-xs uppercase font-bold tracking-widest text-muted-custom" data-es="Rol" data-en="Role">Rol</span>
+                    <span class="text-base font-medium text-[#f2f2f2]">UX/UI Designer</span>
+                </div>
+                <div class="space-y-1">
+                    <span class="block text-xs uppercase font-bold tracking-widest text-muted-custom" data-es="Enfoque" data-en="Focus">Enfoque</span>
+                    <span class="text-sm md:text-base font-medium text-[#f2f2f2]" data-es="Investigación Inversa, B2B, Automatización" data-en="Reverse Engineering, B2B, Automation">Investigación Inversa, B2B, Automatización</span>
+                </div>
+                <div class="space-y-1">
+                    <span class="block text-xs uppercase font-bold tracking-widest text-muted-custom" data-es="Estrategia" data-en="Strategy">Estrategia</span>
+                    <span class="text-sm md:text-base font-medium text-[#f2f2f2]" data-es="Reducción de Carga Cognitiva y Pasos de Interfaz" data-en="Cognitive Load Reduction & Interface Steps Minimization">Reducción de Carga Cognitiva y Pasos de Interfaz</span>
+                </div>
+            </div>
+        </header>
+
+        <section id="hero-banner" class="opacity-0 scale-95 space-y-4">
+            <div class="relative bg-gradient-to-br from-[#6b2461] to-[#4a1542] rounded-2xl border border-white/10 overflow-hidden shadow-2xl group transition-all duration-500 hover:border-white/20">
+
+                <div class="bg-black/20 px-6 py-4 border-b border-white/5 flex items-center justify-between text-sm text-muted-custom">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-2.5 h-2.5 rounded-full bg-white/20"></div>
+                        <span class="font-bold tracking-wider">LIVERPOOL MARKETPLACE</span>
+                    </div>
+                    <span class="bg-[#FF6A13]/20 text-[#FF6A13] font-bold px-2.5 py-0.5 rounded text-xs tracking-wide">REDESIGN</span>
+                </div>
+
+                <div class="aspect-[16/9] w-full bg-black/10 relative flex items-center justify-center overflow-hidden">
+                    <img src="assets/dashboard-redesign.png" alt="Liverpool Dashboard Redesign" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.01]">
+
+                    <div class="absolute bottom-6 left-6 right-6 bg-[#181818]/85 backdrop-blur-md p-6 rounded-xl border border-white/10 max-w-4xl space-y-2">
+                        <span class="text-xs font-bold uppercase tracking-widest text-[#FF6A13]" data-es="Solución Estratégica de Producto" data-en="Strategic Product Solution">Solución Estratégica de Producto</span>
+                        <h3 class="text-xl md:text-2xl font-black text-white" data-es="Carga Inteligente Asistida: Publicación Completa en una Sola Pantalla" data-en="Smart Assisted Upload: Complete Publishing on a Single Screen">Carga Inteligente Asistida: Publicación Completa en una Sola Pantalla</h3>
+                        <p class="text-sm text-readable hidden md:block leading-relaxed" data-es="Al procesar el identificador único (EAN), el sistema automatiza la recuperación de metadata técnica y recursos visuales. El flujo se reduce de un laberinto de más de 4 pantallas a un único espacio de validación humana." data-en="By processing the unique identifier (EAN), the system automates technical metadata and visual asset retrieval. The flow is compressed from a labyrinth of 4+ screens into a single human validation space.">Al procesar el identificador único (EAN), el sistema automatiza la recuperación de metadata técnica y recursos visuales. El flujo se reduce de un laberinto de más de 4 pantallas a un único espacio de validación humana.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="animate-block opacity-0 translate-y-6 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div class="lg:col-span-5 space-y-4">
+                <span class="text-sm font-bold uppercase tracking-widest text-[#FF6A13]">01 / METHODOLOGY & CRITERIA</span>
+                <h2 class="text-3xl font-black tracking-tight leading-tight" data-es="Explicación de mi Proceso: Investigación Inversa" data-en="Process Explanation: Reverse Engineering">Explicación de mi Proceso: Investigación Inversa</h2>
+                <p class="text-base text-readable leading-relaxed" data-es="Como no contaba con acceso directo al sistema interno de la empresa, mi decisión fue investigar el funcionamiento de la plataforma desde fuera. Analicé a fondo la página pública de Liverpool y su canal oficial de YouTube para vendedores, revisando detalladamente los videotutoriales de creación manual y masiva de productos. Con esto, capturé las pantallas clave y las transformé en un diagrama de flujo real (AS-IS) para entender exactamente cómo funciona el proceso actual desde la raíz." data-en="Since I did not have direct access to the company's internal system, my decision was to investigate the operation of the platform from the outside. I thoroughly analyzed Liverpool's public page and its official YouTube channel for sellers, reviewing in detail the video tutorials for manual and mass product creation. With this, I captured the key screens and transformed them into an actual flowchart (AS-IS) to understand exactly how the current process works from the root.">Como no contaba con acceso directo al sistema interno de la empresa, mi decisión fue investigar el funcionamiento de la plataforma desde fuera. Analicé a fondo la página pública de Liverpool y su canal oficial de YouTube para vendedores, revisando detalladamente los videotutoriales de creación manual y masiva de productos. Con esto, capturé las pantallas clave y las transformé en un diagrama de flujo real (AS-IS) para entender exactamente cómo funciona el proceso actual desde la raíz.</p>
+            </div>
+            <div class="lg:col-span-7 bg-gradient-to-br from-[#6b2461] to-[#4a1542] rounded-xl border border-white/10 p-4 flex flex-col items-center shadow-xl">
+                <div class="w-full overflow-hidden rounded-lg bg-black/10 border border-white/5">
+                    <img src="assets/flujo-actual-asis.png" alt="Mapeo del Flujo Actual AS-IS" class="lightbox-trigger w-full h-auto aspect-[16/10] object-cover cursor-zoom-in transition-transform duration-500 hover:scale-[1.01]">
+                </div>
+                <div class="mt-3 text-center">
+                    <span class="text-xs text-[#FF6A13] font-bold tracking-wide animate-pulse inline-flex items-center gap-1.5" data-es="🔍 Haz clic en el flujo AS-IS para expandir y hacer zoom interactivo" data-en="🔍 Click on the AS-IS flow to expand and use interactive zoom">🔍 Haz clic en el flujo AS-IS para expandir y hacer zoom interactivo</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="animate-block opacity-0 translate-y-6 space-y-8">
+            <div class="max-w-4xl space-y-2">
+                <span class="text-sm font-bold uppercase tracking-widest text-[#FF6A13]">02 / PROBLEM AUDIT</span>
+                <h2 class="text-3xl font-black tracking-tight" data-es="Búsqueda de datos en comunidad y selección de problemas" data-en="Community data search & Problem Selection">Búsqueda de datos en comunidad y selección de problemas</h2>
+                <p class="text-base text-readable" data-es="Para descubrir los verdaderos puntos de dolor, investigué comentarios y experiencias de vendedores reales en foros de discusión y comunidades digitales de e-commerce. Crucé estos testimonios empíricos con herramientas de IA para definir y priorizar los tres problemas críticos que impactan directamente al negocio:" data-en="To uncover true pain points, I inherited real seller comments and experiences across discussion forums and digital e-commerce communities. I cross-referenced these empirical testimonials with AI tools to define and prioritize the three critical problems directly impacting the business:">Para descubrir los verdaderos puntos de dolor, investigué comentarios y experiencias de vendedores reales en foros de discusión y comunidades digitales de e-commerce. Crucé estos testimonios empíricos con herramientas de IA para definir y priorizar los tres problemas críticos que impactan directamente al negocio:</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-[#6b2461] rounded-xl border border-white/10 p-6 space-y-4 flex flex-col items-start text-left">
+                    <svg class="w-12 h-12 text-[#FF6A13]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                    </svg>
+                    <h3 class="text-xl font-bold" data-es="Incertidumbre Operativa" data-en="Operational Uncertainty">Incertidumbre Operativa</h3>
+                    <p class="text-sm text-readable leading-relaxed" data-es="Los usuarios navegan a ciegas en flujos de 'registros' y 'solicitudes' asíncronas. No reciben retroalimentación inmediata sobre la validez de sus archivos, congelando su operation." data-en="Users navigate blindly through asynchronous 'records' and 'requests' flows. They receive no immediate feedback on file validity, freezing their operation.">Los usuarios navegan a ciegas en flujos de 'registros' y 'solicitudes' asíncronas. No reciben retroalimentación inmediata sobre la validez de sus archivos, congelando su operación.</p>
+                </div>
+                <div class="bg-[#6b2461] rounded-xl border border-white/10 p-6 space-y-4 flex flex-col items-start text-left">
+                    <svg class="w-12 h-12 text-[#FF6A13]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                    </svg>
+                    <h3 class="text-xl font-bold" data-es="Obstáculo de Recursos Gráficos" data-en="Visual Asset Bottleneck">Obstáculo de Recursos Gráficos</h3>
+                    <p class="text-sm text-readable leading-relaxed" data-es="La validación tardía y manual de fotografías frena por completo la venta inmediata, provocando semanas de inactividad de inventario y pérdidas económicas severas para el seller." data-en="Delayed manual photo validation completely halts immediate sales, causing weeks of inventory inactivity and severe economic losses for the seller.">La validación tardía y manual de fotografías frena por completo la venta inmediata, provocando semanas de inactividad de inventario y pérdidas económicas severas para el seller.</p>
+                </div>
+                <div class="bg-[#6b2461] rounded-xl border border-white/10 p-6 space-y-4 flex flex-col items-start text-left">
+                    <svg class="w-12 h-12 text-[#FF6A13]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                    </svg>
+                    <h3 class="text-xl font-bold" data-es="Ciclo Reactivo de Re-trabajo" data-en="Reactive Rework Cycle">Ciclo Reactivo de Re-trabajo</h3>
+                    <p class="text-sm text-readable leading-relaxed" data-es="La validación tardía obliga a un ciclo de prueba y error que frustra al usuario y satura el soporte al estionar incidencias en lugar de prevenirlas." data-en="Late validation forces a “trial and error” cycle that frustrates the user and overwhelms support by handling issues rather than preventing them.">La validación tardía obliga a un ciclo de "prueba y error" que frustra al usuario y satura el soporte al estionar incidencias en lugar de prevenirlas.</p>
+                </div>
+            </div>
+
+            <div class="bg-black/10 p-6 rounded-lg border-l-2 border-[#FF6A13] text-sm md:text-base text-readable flex items-start md:items-center gap-4 leading-relaxed">
+                <svg class="w-6 h-6 text-[#FF6A13]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <p>
+                    <span class="font-bold text-white" data-es="Impacto Comercial Directo:" data-en="Direct Business Impact">Impacto Comercial Directo:</span> <span data-es="Esta falta de agilidad para confirmar si la información y los recursos gráficos son correctos desincentiva la carga de inventario nuevo, mermando drásticamente la competitividad de Liverpool frente a otros referentes del ecosistema." data-en="This lack of agility in confirming whether information and graphics are correct discourages new inventory uploads, drastically reducing Liverpool's competitiveness against market alternatives.">Esta falta de agilidad para confirmar si la información y los recursos gráficos son correctos desincentiva la carga de inventario nuevo, mermando drásticamente la competitividad de Liverpool frente a otros referentes del ecosistema.</span>
+                </p>
+            </div>
+        </section>
+
+        <section class="animate-block opacity-0 translate-y-6 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div class="lg:col-span-7 bg-gradient-to-br from-[#6b2461] to-[#4a1542] rounded-xl border border-white/10 p-2 aspect-[16/10] overflow-hidden shadow-xl">
+                <img src="assets/user-persona-javier.png" alt="User Persona Javier" class="w-full h-full object-cover rounded-lg">
+            </div>
+
+            <div class="lg:col-span-5 space-y-4">
+                <span class="text-sm font-bold uppercase tracking-widest text-[#FF6A13]">03 / USER STORYTELLING</span>
+                <h2 class="text-3xl font-black tracking-tight" data-es="Conociendo al Usuario: La Historia de Javier" data-en="Knowing the User: Javier's Story">Conociendo al Usuario: La Historia de Javier</h2>
+                <p class="text-base text-readable leading-relaxed" data-es="Javier es un administrador de catálogo digital que sufre con la lentitud y fragmentación del software actual. Su meta principal es publicar productos de alta rotación rápido para poder competir en el mercado. Sin embargo, pierde muchísimo tiempo llenando manualmente los mismos campos una y otra vez en formularios larguísimos, con la constante preocupación de esperar semanas para enterarse de que sus fotos fueron rechazadas por el sistema." data-en="Javier is a digital catalog manager who struggles with the slowness and fragmented nature of the current software. His main goal is to quickly publish high-turnover products to stay competitive in the market. However, he loses a lot of time manually filling out the same fields over and over again in lengthy forms, while constantly worrying that weeks later the system will reject his photos.">
+                    Javier es un administrador de catálogo digital que sufre con la lentitud y fragmentación del software actual. Su meta principal es publicar productos de alta rotación rápido para poder competir en el mercado. Sin embargo, pierde muchísimo tiempo llenando manualmente los mismos campos una y otra vez en formularios larguísimos, con la constante preocupación de esperar semanas para enterarse de que sus fotos fueron rechazadas por el sistema.
+                </p>
+
+                <div class="grid grid-cols-2 gap-4 pt-4 border-t border-white/10 text-lg">
+                    <div>
+                        <span class="font-bold text-[#FF6A13] uppercase tracking-wider block mb-1" data-es="Needs" data-en="Needs">Necesidades</span>
+                        <p class="text-muted-custom" data-es="Validación de recursos gráficos en tiempo real y agilidad en el Time-to-Market." data-en="Real-time graphic asset validation and agile Time-to-Market.">Validación de recursos gráficos en tiempo real y agilidad en el Time-to-Market.</p>
+                    </div>
+                    <div>
+                        <span class="font-bold text-[#FF6A13] uppercase tracking-wider block mb-1" data-es="Frustrations" data-en="Frustrations">Frustraciones</span>
+                        <p class="text-muted-custom" data-es="El re-trabajo continuo por falta de feedback inmediato del sistema." data-en="Continuous rework due to lack of immediate system feedback.">El re-trabajo continuo por falta de feedback inmediato del sistema.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="animate-block opacity-0 translate-y-6 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div class="lg:col-span-5 space-y-4">
+                <span class="text-sm font-bold uppercase tracking-widest text-[#FF6A13]">04 / SOLUTION LOGIC & FEASIBILITY</span>
+                <h2 class="text-3xl font-black tracking-tight leading-tight" data-es="Carga Inteligente Asistida en una Sola Pantalla" data-en="Smart Assisted Upload on a Single Screen">Carga Inteligente Asistida en una Sola Pantalla</h2>
+                <p class="text-base text-readable leading-relaxed" data-es="Mi propuesta cambia por completo la carga manual por un sistema inteligente que se anticipa al usuario. Al ingresar el código de barras (EAN) —ya sea escaneándolo, escribiéndolo o por comando de voz—, el sistema hace el trabajo pesado de forma automática: busca y trae toda la información del producto (como nombre, marca, modelo, categoría, descripción y fotografías) en un par de minutos, generando una propuesta única de publicación." data-en="My proposal completely replaces manual entry with an intelligent system that anticipates user needs. By entering the barcode (EAN) —whether by scanning it, typing it, or using voice commands— the system does the heavy lifting automatically: it retrieves all product information (such as name, brand, model, category, description, and photographs) in just a couple of minutes, generating a unique publishing proposal.">
+                    Mi propuesta cambia por completo la carga manual por un sistema inteligente que se anticipa al usuario. Al ingresar el código de barras (EAN) —ya sea escaneándolo, escribiéndolo o por comando de voz—, el sistema hace el trabajo pesado de forma automática: busca y trae toda la información del producto (como nombre, marca, modelo, categoría, descripción y fotografías) en un par de minutos, generando una propuesta única de publicación.
+                </p>
+                <p class="text-base text-readable leading-relaxed" data-es="Esta solución elimina la necesidad de navegar por múltiples pantallas y pasos repetitivos, dándole a Javier la oportunidad de trabajar como un supervisor estratégico en lugar de un capturador de datos. Toda la información recuperada se revisa y aprueba a través de una casilla interactiva obligatoria, logrando que el producto quede publicado desde una sola pantalla unificada." data-en="This solution eliminates the need to navigate through multiple screens and repetitive steps, giving Javier the opportunity to work as a strategic supervisor instead of a data entry clerk. All retrieved information is reviewed and approved via a mandatory interactive checkbox, allowing the product to be published from a single unified screen.">
+                    Esta solución elimina la necesidad de navegar por múltiples pantallas y pasos repetitivos, dándole a Javier la oportunidad de trabajar como un supervisor estratégico en lugar de un capturador de datos. Toda la información recuperada se revisa y aprueba a través de una casilla interactiva obligatoria, logrando que el producto quede publicado desde una sola pantalla unificada.
+                </p>
+            </div>
+            <div class="lg:col-span-7 bg-gradient-to-br from-[#6b2461] to-[#4a1542] rounded-xl border border-white/10 p-4 flex flex-col items-center shadow-xl">
+                <div class="w-full overflow-hidden rounded-lg bg-black/10 border border-white/5">
+                    <img src="assets/pantallas-creacion-pasos.png" alt="Flujo Propuesto de Pantalla Única (TO-BE)" class="lightbox-trigger w-full h-auto aspect-[16/10] object-cover cursor-zoom-in transition-transform duration-500 hover:scale-[1.01]">
+                </div>
+                <div class="mt-3 text-center">
+                    <span class="text-xs text-[#FF6A13] font-bold tracking-wide animate-pulse inline-flex items-center gap-1.5" data-es="🔍 Haz clic en el flujo TO-BE para expandir y hacer zoom interactivo" data-en="🔍 Click on the TO-BE flow to expand and use interactive zoom">🔍 Haz clic en el flujo TO-BE para expandir y hacer zoom interactivo</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="redesigned-flow" class="animate-block opacity-0 translate-y-6 space-y-12 pb-16">
+            <div class="max-w-4xl space-y-2">
+                <span class="text-sm font-bold uppercase tracking-widest text-[#FF6A13]">05 / REDESIGNED ADVANTAGES</span>
+                <h2 class="text-3xl font-black tracking-tight" data-es="Ventajas del Rediseño" data-en="Redesigned Advantages">Ventajas del Rediseño</h2>
+                <p class="text-base text-readable" data-es="Mejoras clave que justifican las decisiones de ingeniería." data-en="Key improvements that justify engineering decisions.">Mejoras clave que justifican las decisiones de ingeniería.</p>
+            </div>
+
+            <div class="bg-gradient-to-br from-[#6b2461] to-[#4a1542] rounded-xl border border-white/10 p-4 flex flex-col items-center shadow-xl">
+                <div class="w-full overflow-hidden rounded-lg bg-black/10 border border-white/5">
+                    <img src="assets/pre-carga.png" alt="Dashboard Inicial Limpio - Antes de usar" class="lightbox-trigger w-full h-auto rounded-lg cursor-zoom-in transition-transform duration-500 hover:scale-[1.01]">
+                </div>
+                <div class="pt-4 border-t border-white/10 mt-4 text-center w-full">
+                    <p class="text-sm text-readable font-medium mb-1" data-es="Dashboard inicial limpio: El estado en cero de la interfaz antes de arrancar el proceso manual." data-en="Clean initial dashboard: The zero-state interface before starting the manual upload process.">Dashboard inicial limpio: El estado en cero de la interfaz antes de arrancar el proceso manual.</p>
+                    <span class="text-xs text-[#FF6A13] font-bold tracking-wide animate-pulse inline-flex items-center gap-1.5" data-es="🔍 Haz clic para expandir y revisar la interfaz limpia" data-en="🔍 Click to expand and review the clean interface layout">🔍 Haz clic para expandir y revisar la interfaz limpia</span>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-br from-[#6b2461] to-[#4a1542] rounded-xl border border-white/10 p-4 flex flex-col items-center shadow-xl w-full">
+                <div class="w-full overflow-hidden rounded-lg bg-black/10 border border-white/5">
+                    <img src="assets/post-carga.png" alt="Carga Asistida en uso con metadata recuperada" class="lightbox-trigger w-full h-auto rounded-lg cursor-zoom-in transition-transform duration-500 hover:scale-[1.01]">
+                </div>
+                <div class="pt-4 border-t border-white/10 mt-4 text-center w-full">
+                    <p class="text-sm text-readable font-medium mb-1" data-es="Vista integral del flujo de Carga Asistida con anotaciones de diseño de experiencia y reducción de carga cognitiva." data-en="Integral view of the Assisted Upload flow with user experience annotations and cognitive load reduction details.">Vista integral del flujo de Carga Asistida con anotaciones de diseño de experiencia y reducción de carga cognitiva.</p>
+                    <span class="text-xs text-[#FF6A13] font-bold tracking-wide animate-pulse inline-flex items-center gap-1.5" data-es="🔍 Haz clic para expandir el mapa detallado de anotaciones" data-en="🔍 Click to expand the detailed annotations map">🔍 Haz clic para expandir el mapa detallado de anotaciones</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="animate-block opacity-0 translate-y-6 space-y-8">
+            <div class="border-b border-white/10 pb-4 flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+                <h2 class="text-3xl font-black tracking-tight" data-es="Validación de Métricas e Impacto" data-en="Metrics Validation & Impact">Validación de Métricas e Impacto</h2>
+                <span class="text-sm font-bold uppercase text-[#FF6A13] tracking-widest" data-es="Antes vs Después" data-en="Before vs After">Antes vs Después</span>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-black/20 border border-white/5 p-6 rounded-xl text-center space-y-2">
+                    <span class="text-xs font-bold uppercase tracking-wider text-muted-custom" data-es="TIEMPO DE CARGA" data-en="UPLOAD TIME">TIEMPO DE CARGA</span>
+                    <div class="text-4xl font-black text-[#FF6A13] tracking-tight">&lt; 45s</div>
+                    <span class="text-xs block text-readable font-medium" data-es="Antes: 5 - 12 min por SKU" data-en="Before: 5 - 12 min per SKU">Antes: 5 - 12 min por SKU</span>
+                </div>
+                <div class="bg-black/20 border border-white/5 p-6 rounded-xl text-center space-y-2">
+                    <span class="text-xs font-bold uppercase tracking-wider text-muted-custom">TIME-TO-MARKET</span>
+                    <div class="text-4xl font-black text-white tracking-tight" data-es="Instantáneo" data-en="Instantaneous">Instantáneo</div>
+                    <span class="text-xs block text-readable font-medium" data-es="Antes: Espera de semanas" data-en="Before: Weeks of waiting">Antes: Espera de semanas</span>
+                </div>
+                <div class="bg-black/20 border border-white/5 p-6 rounded-xl text-center space-y-2">
+                    <span class="text-xs font-bold uppercase tracking-wider text-muted-custom" data-es="TASA DE ERROR" data-en="ERROR RATE">TASA DE ERROR</span>
+                    <div class="text-4xl font-black text-[#FF6A13] tracking-tight" data-es="Mínima" data-en="Minimal">Mínima</div>
+                    <span class="text-xs block text-readable font-medium" data-es="Validación en tiempo real" data-en="Real-time validation">Validación en tiempo real</span>
+                </div>
+                <div class="bg-black/20 border border-white/5 p-6 rounded-xl text-center space-y-2">
+                    <span class="text-xs font-bold uppercase tracking-wider text-muted-custom" data-es="TAREAS ADMTVAS." data-en="ADMIN TASKS">TAREAS ADMTVAS.</span>
+                    <div class="text-4xl font-black text-white tracking-tight">&lt; 20%</div>
+                    <span class="text-xs block text-readable font-medium" data-es="Antes: ocupaban el 70%" data-en="Before: occupied 70%">Antes: ocupaban el 70%</span>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="bg-[#121212] py-32 px-6 mt-32 relative overflow-hidden">
+        <div class="max-w-[1320px] mx-auto flex flex-col items-center justify-center text-center space-y-12 relative z-10">
+
+            <h2 class="text-5xl md:text-7xl font-black tracking-tighter text-white" data-es="Gracias por tu tiempo." data-en="Thanks for your time.">
+                Gracias por tu tiempo.
+            </h2>
+
+            <div class="flex flex-col md:flex-row items-center gap-4">
+                <a href="https://figma.fun/y3RkWd" target="_blank" class="bg-[#FF6A13] hover:bg-[#e55a00] text-white px-8 py-4 rounded-full font-bold text-sm tracking-widest uppercase transition-all duration-300 shadow-xl flex items-center gap-3">
+                    <i class="fa-brands fa-figma text-lg"></i>
+                    <span data-es="PROTOTIPO FIGMA" data-en="FIGMA PROTOTYPE">PROTOTIPO FIGMA</span>
+                </a>
+                <a href="https://figma.fun/T0qRZu" target="_blank" class="btn-outline text-white px-8 py-4 rounded-full font-bold text-sm tracking-widest uppercase transition-all duration-300 flex items-center gap-3">
+                    <i class="fa-solid fa-file-code text-lg"></i>
+                    <span data-es="ARCHIVO FIGMA" data-en="FIGMA FILE">ARCHIVO FIGMA</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="https://www.linkedin.com/in/robertogutierrez-uxui" target="_blank" class="bg-white/5 hover:bg-white/10 p-4 rounded-full transition-all duration-300 border border-white/10 hover:border-[#FF6A13]" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in text-white text-xl"></i>
+                </a>
+                <a href="https://drive.google.com/file/d/1-3wCHuqbUnF-a024_ePljJhRKzitfWTK/view?usp=drive_link" target="_blank" class="bg-white/5 hover:bg-white/10 p-4 rounded-full transition-all duration-300 border border-white/10 hover:border-[#FF6A13]" title="Download CV">
+                    <i class="fa-solid fa-file-pdf text-white text-xl"></i>
+                </a>
+            </div>
+
+            <button id="back-to-start" class="bg-white/5 hover:bg-white/10 text-white/70 hover:text-white px-6 py-2 rounded-full border border-white/10 text-[10px] font-bold tracking-widest uppercase transition-all duration-300 cursor-pointer">
+                <span data-es="REGRESAR AL INICIO" data-en="BACK TO START">REGRESAR AL INICIO</span>
+            </button>
+        </div>
+    </footer>
+
+    <div id="lightbox-modal" class="fixed inset-0 bg-black/95 z-50 opacity-0 pointer-events-none transition-opacity duration-300 flex flex-col items-center justify-center p-4 overflow-hidden select-none">
+        <div class="absolute top-6 left-6 text-white/50 text-xs tracking-wider uppercase font-medium hidden md:block">
+            🖱️ Arrastra para explorar • Mouse scroll para Zoom
+        </div>
+
+        <button id="close-lightbox" class="absolute top-6 right-6 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 px-5 py-2.5 rounded-full transition-colors cursor-pointer text-xs font-bold tracking-widest uppercase z-50">
+            ✕ Cerrar
+        </button>
+
+        <div id="zoom-container" class="zoom-wrapper w-[85vw] h-[80vh] flex items-center justify-center overflow-hidden cursor-grab active:cursor-grabbing">
+            <img id="lightbox-img" src="" alt="Flujo Expandido" class="max-w-full max-h-full object-contain transition-transform duration-100 ease-out will-change-transform origin-center">
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            // 1. ENGINE DE TRADUCCIÓN NATIVA (i18n COMPLETA)
+            const toggleBtn = document.getElementById('lang-toggle');
+            const langLabel = document.getElementById('lang-label');
+            let currentLang = 'es';
+
+            const updateLanguage = (lang) => {
+                document.querySelectorAll('[data-es]').forEach(el => {
+                    el.textContent = el.getAttribute(`data-${lang}`);
+                });
+                langLabel.textContent = lang === 'es' ? 'EN' : 'ES';
+            };
+
+            toggleBtn.addEventListener('click', () => {
+                currentLang = currentLang === 'es' ? 'en' : 'es';
+                updateLanguage(currentLang);
+                gsap.fromTo(toggleBtn, { scale: 0.92 }, { scale: 1, duration: 0.2, ease: "power2.out" });
+            });
+
+            // 2. TIMELINE ORQUESTRADA GSAP
+            const mainTimeline = gsap.timeline({ defaults: { ease: "power4.out", duration: 1.2 } });
+
+            mainTimeline.to("#header-section", { opacity: 1, y: 0 })
+                .to("#hero-banner", { opacity: 1, scale: 1 }, "-=0.75")
+                .to(".animate-block", {
+                    opacity: 1,
+                    y: 0,
+                    stagger: 0.3
+                }, "-=0.6");
+
+            // 3. REGRESAR AL INICIO (Smooth Scroll)
+            document.getElementById('back-to-start').addEventListener('click', () => {
+                gsap.to(window, { duration: 2, scrollTo: 0, ease: "power4.inOut" });
+            });
+
+            // 4. ENGINE ARQUITECTÓNICO DE VISOR REUTILIZABLE
+            const triggers = document.querySelectorAll('.lightbox-trigger');
+            const modal = document.getElementById('lightbox-modal');
+            const modalImg = document.getElementById('lightbox-img');
+            const modalClose = document.getElementById('close-lightbox');
+            const zoomContainer = document.getElementById('zoom-container');
+
+            let scale = 1;
+            let pointX = 0;
+            let pointY = 0;
+            let startX = 0;
+            let startY = 0;
+            let isDragging = false;
+            let wasDragging = false;
+            let initialPinchDist = 0;
+
+            const updateTransform = () => {
+                if (scale < 1) scale = 1;
+                if (scale > 5) scale = 5;
+                modalImg.style.transform = `translate(${pointX}px, ${pointY}px) scale(${scale})`;
+            };
+
+            triggers.forEach(trigger => {
+                trigger.addEventListener('click', () => {
+                    modalImg.src = trigger.src;
+                    scale = 1;
+                    pointX = 0;
+                    pointY = 0;
+                    updateTransform();
+                    modal.classList.remove('pointer-events-none');
+                    gsap.to(modal, { opacity: 1, duration: 0.3, ease: "power2.out" });
+                });
+            });
+
+            const closeModal = () => {
+                modal.classList.add('pointer-events-none');
+                gsap.to(modal, { opacity: 0, duration: 0.25, ease: "power2.in" });
+            };
+
+            modalClose.addEventListener('click', closeModal);
+            document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !modal.classList.contains('pointer-events-none')) closeModal(); });
+
+            zoomContainer.addEventListener('pointerdown', (e) => {
+                e.preventDefault();
+                startX = e.clientX - pointX;
+                startY = e.clientY - pointY;
+                isDragging = true;
+                wasDragging = false;
+                zoomContainer.setPointerCapture(e.pointerId);
+            });
+
+            zoomContainer.addEventListener('pointermove', (e) => {
+                if (!isDragging) return;
+                wasDragging = true;
+                pointX = e.clientX - startX;
+                pointY = e.clientY - startY;
+                updateTransform();
+            });
+
+            zoomContainer.addEventListener('pointerup', (e) => {
+                if (isDragging) {
+                    isDragging = false;
+                    zoomContainer.releasePointerCapture(e.pointerId);
+                }
+            });
+
+            zoomContainer.addEventListener('pointercancel', (e) => {
+                isDragging = false;
+            });
+
+            zoomContainer.addEventListener('wheel', (e) => {
+                e.preventDefault();
+                const delta = e.deltaY * -0.01;
+                scale += delta;
+                updateTransform();
+            }, { passive: false });
+
+            zoomContainer.addEventListener('touchstart', (e) => {
+                if (e.touches.length === 2) {
+                    initialPinchDist = Math.hypot(
+                        e.touches[0].clientX - e.touches[1].clientX,
+                        e.touches[0].clientY - e.touches[1].clientY
+                    );
+                }
+            });
+
+            zoomContainer.addEventListener('touchmove', (e) => {
+                if (e.touches.length === 2 && initialPinchDist > 0) {
+                    const currentDist = Math.hypot(
+                        e.touches[0].clientX - e.touches[1].clientX,
+                        e.touches[0].clientY - e.touches[1].clientY
+                    );
+                    const diff = currentDist / initialPinchDist;
+                    scale = scale * diff;
+                    initialPinchDist = currentDist;
+                    updateTransform();
+                }
+            });
+
+            zoomContainer.addEventListener('touchend', (e) => {
+                if (e.touches.length < 2) initialPinchDist = 0;
+            });
+        });
+    </script>
+</body>
+
+</html>
